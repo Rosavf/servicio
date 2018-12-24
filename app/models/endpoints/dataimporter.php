@@ -11,6 +11,7 @@ final class DataImporter extends MySqlDataWrite{
         $module=$paramArray[2];
 
         $this->importAccounts(ACCOUNTS_TABLE);
+        $this->importData("2018","3","BANCO","=",BSEG_TABLE,CECOS_TABLE);
         
     }
     
