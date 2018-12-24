@@ -1,0 +1,26 @@
+{
+    "app":{
+        
+        "sitename":"MVC",
+
+        "urlroute":"http://localhost/mvc"
+    
+    },
+
+
+    "googleCloud":{
+
+        "projectId":"informe-211921"
+
+    },
+
+    "sql":{
+
+        "host":"localhost",
+        "user":"root",
+        "password":"Pit2018mtv#@",
+        "dataBase":"informe"
+
+    }
+
+}
