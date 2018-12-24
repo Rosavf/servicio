@@ -10,9 +10,9 @@ class test extends Controller{
     
     }
 
-    public function getid(){
+    public function getConfig(){
 
-        echo(GOOGLE_CREDENTIALS);
+        echo('ok');
 
     }
 

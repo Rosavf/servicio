@@ -2,12 +2,27 @@
 
 //dependencias minimas
 ini_set('memory_limit', '1536M');
+
+//archivos de configuracion
 require_once('../app/config/config.php');
-require_once('../app/config/loader.php');
+
+//archivos de configuracion
+require_once('../app/lib/interfaces/libinterfaces.php');
+require_once('../app/models/interfaces/modelinterfaces.php');
+
+//controlador maestro
+require_once('../app/controllers/classes/controller.php');
+
+//clases de modelos
+require_once('../app/models/classes/bigqueryconnection.php');
+require_once('../app/models/classes/bigqueryaccountimport.php');
+require_once('../app/models/classes/bigquerydataimport.php');
+require_once('../app/models/classes/mysqldatawrite.php');
+
+//enrutador
 require_once('router.php');
 
-//
-$loader= new Loader();
+//iniciamos el enrutador
 $router = new Router();
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-class BigQueryDataImport extends AccountImport implements BigQueryDataImporting{
+class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataImporting{
 
     protected $subtotalArray=[];
     protected $subtotalTable=[];

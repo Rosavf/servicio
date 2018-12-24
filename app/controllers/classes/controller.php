@@ -2,7 +2,7 @@
 
 //clase controladora de carga y ejecucion de modelos
 
-class Controller implements Controlling{
+class Controller{
 
     // mandamos a llamar un modelo
     public function model($folder,$model){

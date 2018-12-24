@@ -2,24 +2,21 @@
     "app":{
         
         "sitename":"MVC",
-
         "urlroute":"http://localhost/mvc"
     
     },
 
-
     "googleCloud":{
 
-        "projectId":"informe-211921"
+        "projectId":"informe-211921",
 
-    },
+        "bigQuery":{
 
-    "sql":{
+            "bsegTable": "`informe-211921.PRE_PRODUCCION_MULTIVA.BSEGAIO`",
+            "cecosTable":"`informe-211921.PRE_PRODUCCION_MULTIVA.CECOS`",
+            "acocuntsTable":"`informe-211921.PRE_PRODUCCION_MULTIVA.CUENTAS`"
 
-        "host":"localhost",
-        "user":"root",
-        "password":"Pit2018mtv#@",
-        "dataBase":"informe"
+        }
 
     }
 
