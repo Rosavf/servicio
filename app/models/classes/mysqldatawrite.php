@@ -7,7 +7,7 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
     public function attachMySql($mySql){
 
         $this->mySql=$mySql;
-        $this->mySql->begin('localhost','root','Pit2018mtv#@','Informe');
+        $this->mySql->begin('localhost','root','Pit2018mtv#@','INFORME');
 
     }
 
@@ -19,6 +19,15 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
 
     public function writeMySql($table){
 
+        foreach ($this->subtotalTable as $row) {
+
+            $sql="INSERT INTO `".$tabla."`(`Modulo`, `Id_Cuenta`, `Concepto`, `Super_Concepto`, `Subtotal`, `Mes`, `Anualidad`) VALUES('".$row["Modulo"]."','".$row["Id_Cuenta"]."','".$row["Concepto"]."','".$row["Super_Concepto"]."','".$row["Subtotal"]."','".$row["Mes"]."','".$row["Anualidad"]."');";
+            
+            $this->mySql->query($tabla,$sql);
+
+        }
+
+        $this->subtotalTable=null;
 
     }
 
