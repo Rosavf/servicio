@@ -15,7 +15,7 @@ define('SITE_NAME',$config->app->sitename);
 //GOOGLE_CLOUD
 define('PROJECT_ID',$config->googleCloud->projectId);
 define('BSEG_TABLE',$config->googleCloud->bigQuery->bsegTable);
-define('CECOS_TABLE',$config->googleCloud->bigQuery->bsegTable);
-define('ACCOUNTS_TABLE',$config->googleCloud->bigQuery->bsegTable);
+define('CECOS_TABLE',$config->googleCloud->bigQuery->cecosTable);
+define('ACCOUNTS_TABLE',$config->googleCloud->bigQuery->accountsTable);
 
 ?>

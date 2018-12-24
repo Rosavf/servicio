@@ -35,7 +35,6 @@ class BigQuery{
 
         $queryResults = $this->bigQueryClient->runQuery($query);
 
-
         if ($queryResults->isComplete()) {
 
             $rows = $queryResults->rows();
