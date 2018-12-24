@@ -38,7 +38,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
         $uniquerys=null;
 
-
+        $index=0;
 
         foreach ($this->subtotalArray as $subtotal) {
 
@@ -59,6 +59,8 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
             }
 
         }
+
+        $index=0;
 
         print_r($this->subtotalTable);
 
