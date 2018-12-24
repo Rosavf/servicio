@@ -7,6 +7,7 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
     public function attachMySql($mySql){
 
         $this->mySql=$mySql;
+        $this->mySql->begin('localhost','root','Pit2018mtv#@','Informe');
 
     }
 
@@ -17,9 +18,6 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
     }
 
     public function writeMySql($table){
-
-        
-
 
 
     }

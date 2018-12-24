@@ -7,7 +7,7 @@ class importar extends Controller{
         $this->model('endpoints','dataimporter');
 
         $dataImporter=new DataImporter();
-        $dataImporter->attachBigQuery(new BigQuery());
+        $dataImporter->attachBigQuery(new BigQueryParser());
         $dataImporter->execute($params);
 
     }

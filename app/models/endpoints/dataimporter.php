@@ -16,5 +16,4 @@ final class DataImporter extends MySqlDataWrite{
     
 }
 
-
 ?>
