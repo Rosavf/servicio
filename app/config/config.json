@@ -14,7 +14,7 @@
 
             "bsegTable": "`informe-211921.PRE_PRODUCCION_MULTIVA.BSEGAIO`",
             "cecosTable":"`informe-211921.PRE_PRODUCCION_MULTIVA.CECOS`",
-            "acocuntsTable":"`informe-211921.PRE_PRODUCCION_MULTIVA.CUENTAS`"
+            "accountsTable":"`informe-211921.PRE_PRODUCCION_MULTIVA.CUENTAS`"
 
         }
 
