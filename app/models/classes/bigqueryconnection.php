@@ -4,12 +4,11 @@
 class BigQueryConnection implements BigQueryConnecting{
 
     protected $bigQuery;
-    protected $mySql;
 
     public  function attachBigQuery($bigQuery){
 
         $this->bigQuery=$bigQuery;
-        $this->bigQuery->begin(GOOGLE_CREDENTIALS);
+        $this->bigQuery->begin(PROJECT_ID);
 
     }
 

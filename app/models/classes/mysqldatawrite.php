@@ -2,15 +2,17 @@
 
 class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
 
-    public function attachMySql($sql){
+    protected $mySql;
 
+    public function attachMySql($mySql){
 
+        $this->mySql=$mySql;
 
     }
 
     public function detachMySql(){
 
-
+        $this->mySql=null;
 
     }
 
