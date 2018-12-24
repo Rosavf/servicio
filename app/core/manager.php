@@ -13,6 +13,8 @@ require_once('../app/models/interfaces/modelinterfaces.php');
 //interfaces
 require_once('../app/lib/bigquery.php');
 require_once('../app/lib/bigqueryparser.php');
+require_once('../app/lib/pdocrud.php');
+
 
 //controlador maestro
 require_once('../app/controllers/classes/controller.php');
