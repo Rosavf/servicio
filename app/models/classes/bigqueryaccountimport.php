@@ -8,6 +8,9 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
     public function importAccounts($accountTable){
 
         $dml = 'SELECT ID, HKONT, CONCEPTO, SUPERCONCEPTO FROM '.$accountTable.' ORDER BY ID';
+
+        echo($dml);
+
         $accountResult = $this->bigQuery->select($dml);
 
         foreach ($accountResult as $i => $row) {
@@ -16,7 +19,6 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         }
 
-        echo(count($this->accountArray));
  
     }
 
