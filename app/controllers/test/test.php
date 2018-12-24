@@ -10,7 +10,7 @@ class test extends Controller{
     
     }
 
-    public function getConfig(){
+    public function getconfig(){
 
         echo('ok');
 
