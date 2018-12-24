@@ -31,7 +31,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
         // ejecutamos el conjunto de queries
         foreach ($uniquerys as $dml) {
 
-            $subtotal=$this->select($dml);
+            $subtotal=$this->bigQuery->select($dml);
             $this->subtotalArray[]=$subtotal;
 
         }
