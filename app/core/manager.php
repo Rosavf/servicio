@@ -11,8 +11,8 @@ require_once('../app/lib/interfaces/libinterfaces.php');
 require_once('../app/models/interfaces/modelinterfaces.php');
 
 //interfaces
-require_once('../app/lib/classes/bigquery.php');
-require_once('../app/lib/classes/bigqueryparser.php');
+require_once('../app/lib/bigquery.php');
+require_once('../app/lib/bigqueryparser.php');
 
 //controlador maestro
 require_once('../app/controllers/classes/controller.php');
