@@ -18,6 +18,8 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
 
     public function writeMySql($table){
 
+        
+
 
 
     }

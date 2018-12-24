@@ -6,9 +6,13 @@ ini_set('memory_limit', '1536M');
 //archivos de configuracion
 require_once('../app/config/config.php');
 
-//archivos de configuracion
+//interfaces
 require_once('../app/lib/interfaces/libinterfaces.php');
 require_once('../app/models/interfaces/modelinterfaces.php');
+
+//interfaces
+require_once('../app/lib/classes/bigquery.php');
+require_once('../app/lib/classes/bigqueryparser.php');
 
 //controlador maestro
 require_once('../app/controllers/classes/controller.php');

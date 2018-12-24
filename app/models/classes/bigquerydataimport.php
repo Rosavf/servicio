@@ -5,18 +5,18 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
     protected $subtotalArray=[];
     protected $subtotalTable=[];
 
-    public function importData($anualidad,$meses,$modulo,$operator,$bigTable,$cecosTable){
+    public function importData($year,$month,$modulo,$operator,$bigTable,$cecosTable){
 
         // meses a contar en el informe
-        for($i=1;$i<=intval($meses); $i++){
+        for($i=1;$i<=intval($month); $i++){
 
             $subquerys=[];
 
             foreach ($this->accountArray as $row) {
         
-                $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2) AS SUBTOTAL, '.'"'.strval($anualidad).'"'.' AS ANUALIDAD, '.'"'.$modulo.'"'.' AS MODULO, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO '.
+                $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2) AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$modulo.'"'.' AS MODULO, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO '.
                 'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
-                'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($anualidad).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($modulo).'") '.
+                'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($modulo).'") '.
                 'AND HKONT = "'.strval($row['HKONT']).'")';
                         
                 $subquerys[]=$dml;
