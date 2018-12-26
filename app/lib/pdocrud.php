@@ -295,7 +295,7 @@ class PdoCrud{
 
                 foreach ($row as $value) {
 
-                    $list=$value;
+                    $list[]=$value;
 
                 }
                 
