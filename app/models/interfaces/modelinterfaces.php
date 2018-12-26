@@ -52,10 +52,4 @@ interface MySqlDataReading extends MySqlConnecting{
 
 }
 
-interface ParamParser{
-
-    public function parseParams($params);
-
-}
-
 ?>

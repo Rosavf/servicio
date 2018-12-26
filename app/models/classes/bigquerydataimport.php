@@ -62,8 +62,6 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
         $index=0;
 
-        print_r($this->subtotalTable);
-
     }
 
 

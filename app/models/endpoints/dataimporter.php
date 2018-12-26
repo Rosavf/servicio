@@ -13,9 +13,9 @@ final class DataImporter extends MySqlDataWrite{
         $dataImporter->attachBigQuery(new BigQueryParser());
         $this->importAccounts(ACCOUNTS_TABLE);
         $this->importData("2018","3","BANCO","=",BSEG_TABLE,CECOS_TABLE);
+        $this->endBigQuery();
         $this->attachMySql(new PdoCrud());
         $this->writeMySql("Mensual");
-        $this->endBigQuery();
         $this->endMySql();
         
     }
