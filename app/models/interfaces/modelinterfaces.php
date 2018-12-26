@@ -52,4 +52,10 @@ interface MySqlDataReading extends MySqlConnecting{
 
 }
 
+interface MySqlCleaning extends MySqlConnecting{
+
+    public function readData($table, $module);
+
+}
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-class MySqlDataClean{
+class MySqlClean implements MySqlDataCleaning{
 
     protected $mySql;
 
