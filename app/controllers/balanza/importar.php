@@ -5,7 +5,7 @@ class importar extends Controller{
     public function mensual($params){
 
 
-        $paramArray=explode($params);
+        $paramArray=explode("-",$params);
 
         $year=$paramArray[0];
         $month=$paramArray[1];
