@@ -297,6 +297,8 @@ class PdoCrud{
 
             }
 
+            return $list;
+
         }
 
         catch(Exception $e){
