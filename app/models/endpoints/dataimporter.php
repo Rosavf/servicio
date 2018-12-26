@@ -2,20 +2,14 @@
 
 final class DataImporter extends MySqlDataWrite{
 
-    public function __construct($params){
-
-        $paramArray=explode("-",$params);
-
-        $year=$paramArray[0];
-        $month=$paramArray[1];
-        $module=$paramArray[2];
+    public function __construct($year,$month,$module,$operator,$sqlTable){
 
         $this->attachBigQuery(new BigQueryParser());
         $this->importAccounts(ACCOUNTS_TABLE);
-        $this->importData("2018","3","BANCO","=",BSEG_TABLE,CECOS_TABLE);
+        $this->importData($year,$month,$module,$operator,BSEG_TABLE,CECOS_TABLE);
         $this->detachBiqQuery();
         $this->attachMySql(new PdoCrud());
-        $this->writeMySql("Mensual");
+        $this->writeMySql($sqlTable);
         $this->detachMySql();
         
     }
