@@ -1,6 +1,6 @@
 <?php
 
-class MonthlyReport extends MySqlDataReading{
+class MonthlyReport extends MySqlDataRead{
 
     public function parseParams($params){
 

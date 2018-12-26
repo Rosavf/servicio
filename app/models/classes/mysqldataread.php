@@ -22,6 +22,8 @@ class MySqlDataRead implements MySqlDataReading{
 
         $accounts = $this->mySql->select($table,["Modulo", "Id_Cuenta"],"1","Id_Cuenta","assoc");
 
+        print_r($accounts);
+
     }
 
     public function readData(){
