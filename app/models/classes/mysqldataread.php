@@ -26,11 +26,13 @@ class MySqlDataRead implements MySqlDataReading{
 
         $this->accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
+        print_r($this->accountArray);
+
         $results=[];
 
         for($i=0;$i<count($this->accountArray);$i++){
 
-            $months = $crud->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto", "Mes" ,"Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
+            $months = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto", "Mes" ,"Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
 
             foreach ($months as $row) {
 
@@ -42,7 +44,6 @@ class MySqlDataRead implements MySqlDataReading{
         }
 
         print_r($results);
-
 
     }
     
