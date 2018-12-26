@@ -28,7 +28,6 @@ class MySqlDataRead implements MySqlDataReading{
 
     public function readData(){
 
-        //$this->mySql->select();
 
     }
     
