@@ -8,6 +8,8 @@ class informe extends Controller{
 
         $monthlyreport = new MonthlyReport();
 
+        $monthlyreport->execute($params);
+
     }
 
 }
