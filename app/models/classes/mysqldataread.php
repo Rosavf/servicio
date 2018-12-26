@@ -46,6 +46,7 @@ class MySqlDataRead implements MySqlDataReading{
 
         }
 
+        print_r($results);
 
 
     }
