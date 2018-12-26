@@ -10,7 +10,7 @@ final class DataImporter extends MySqlDataWrite{
         $month=$paramArray[1];
         $module=$paramArray[2];
 
-        $dataImporter->attachBigQuery(new BigQueryParser());
+        $this->attachBigQuery(new BigQueryParser());
         $this->importAccounts(ACCOUNTS_TABLE);
         $this->importData("2018","3","BANCO","=",BSEG_TABLE,CECOS_TABLE);
         $this->endBigQuery();
