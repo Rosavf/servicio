@@ -26,8 +26,6 @@ class MySqlDataRead implements MySqlDataReading{
 
         $this->accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
-        print_r($this->accountArray);
-
         $results=[];
 
         for($i=0;$i<count($this->accountArray);$i++){
@@ -43,7 +41,17 @@ class MySqlDataRead implements MySqlDataReading{
 
         }
 
-        print_r($results);
+        $this->dataArray['Data']=$results;
+
+
+
+
+    }
+
+    public function printData(){
+
+
+
 
     }
     
