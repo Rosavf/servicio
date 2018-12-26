@@ -43,7 +43,7 @@ class MySqlDataRead implements MySqlDataReading{
 
         $this->dataArray['Data']=$results;
 
-
+        print_r($this->dataArray);
 
 
     }
