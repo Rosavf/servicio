@@ -2,7 +2,7 @@
 
 final class DataImporter extends MySqlDataWrite{
 
-    public function execute($params){
+    public function __construct($params){
 
         $paramArray=explode("-",$params);
 
