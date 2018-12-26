@@ -20,7 +20,7 @@ class MySqlDataRead implements MySqlDataReading{
 
     public function readAccounts($table,$module){
 
-        $accounts = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'");
+        $accounts = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
         print_r($accounts);
 

@@ -282,9 +282,9 @@ class PdoCrud{
 
 
     //
-    public function selectDistinct($table,$col,$targets){
+    public function selectDistinct($table,$col,$targets,$order){
         
-        $sql="SELECT DISTINCT(".$col.") FROM ".$table." WHERE ".$targets;
+        $sql="SELECT DISTINCT(".$col.") FROM ".$table." WHERE ".$targets." ORDER BY ".$order;
 
         try{
 
