@@ -293,12 +293,12 @@ class PdoCrud{
             $list=[];
             foreach ($result as $key => $value) {
 
-                $list[$value];
+                $list[]=$value;
 
             }
 
         }
-        
+
         catch(Exception $e){
             die($e);
             return null;
