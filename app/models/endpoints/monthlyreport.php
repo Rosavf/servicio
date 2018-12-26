@@ -2,7 +2,7 @@
 
 class MonthlyReport extends MySqlDataRead{
 
-    public function parseParams($params){
+    public function execute($params){
 
         $paramArray=explode("-",$params);
 
