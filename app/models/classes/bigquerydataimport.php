@@ -5,7 +5,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
     protected $subtotalArray=[];
     protected $subtotalTable=[];
 
-    public function importData($year,$month,$modulo,$operator,$bigTable,$cecosTable){
+    public function importData($year,$month,$module,$operator,$bigTable,$cecosTable){
 
         // meses a contar en el informe
         for($i=1;$i<=intval($month); $i++){
