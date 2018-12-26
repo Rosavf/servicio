@@ -1,7 +1,7 @@
 <?php
 
 //dependencias minimas
-ini_set('memory_limit', '1536M');
+ini_set('memory_limit', '2048M');
 
 //archivos de configuracion
 require_once('../app/config/config.php');
