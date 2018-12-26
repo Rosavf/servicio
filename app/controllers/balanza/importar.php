@@ -49,27 +49,27 @@ class importar extends Controller{
 
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"BANCO","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"BANCO","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"CASA","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"CASA","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"GRUPO","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"GRUPO","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"OPERADORA","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"OPERADORA","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SAVELLA","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"SAVELLA","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SERVICIOS","<=","Mensual");
+        $dataImporter=new DataImporter($year,$month,"SERVICIOS","<=","Mensual_Acumulado");
         $dataImporter=null;
 
         echo('success');               
