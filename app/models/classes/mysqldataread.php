@@ -22,14 +22,9 @@ class MySqlDataRead implements MySqlDataReading{
     }
 
     //
-    public function readAccounts($table,$module){
+    public function readData($table,$module){
 
         $this->accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
-
-    }
-
-    //
-    public function readData($table,$module){
 
         $results=[];
 
