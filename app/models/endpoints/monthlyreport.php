@@ -6,7 +6,8 @@ class MonthlyReport extends MySqlDataRead{
 
         $this->attachMySql(new PdoCrud());
         $this->readData("Mensual","BANCO");        
-        $this->endMySql();        
+        $this->endMySql();       
+         
     }
     
 }
