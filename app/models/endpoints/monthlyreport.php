@@ -2,10 +2,10 @@
 
 class MonthlyReport extends MySqlDataRead{
 
-    public function __construct($params){
+    public function __construct($table,$module){
 
         $this->attachMySql(new PdoCrud());
-        $this->readData("Mensual",$params);        
+        $this->readData("Mensual",$module);        
         $this->detachMySql();       
          
     }

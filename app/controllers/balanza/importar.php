@@ -2,10 +2,12 @@
 
 class importar extends Controller{
 
-    public function mensual($params){
+    public function mensual(){
 
         $this->model('endpoints','dataimporter');
         $dataImporter=new DataImporter($params);
+        $dataImporter=null;
+
 
     }
 
