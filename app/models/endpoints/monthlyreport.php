@@ -12,5 +12,4 @@ class MonthlyReport extends MySqlDataRead{
     
 }
 
-
 ?>

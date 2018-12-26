@@ -280,6 +280,93 @@ class PdoCrud{
 
     }
 
+
+    //
+    public function selectDistinct($table,$col,$targets,$order,$type){
+        
+        $sql="SELECT DISTINCT(".$col.") FROM ".$table." WHERE ".$targets." ORDER BY ".$order;
+
+        echo("sql");
+
+        try{
+            
+            switch($type){
+            //
+            case "assoc":
+                $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
+                $table=[];
+                foreach($result as $row){
+                            
+                    $line=[];
+                    foreach($row as $key=>$value){            
+            
+                        $line[$key]=$value;
+        
+                    }
+                
+                    $table[]=$line;
+                }
+                    
+                return $table;
+        
+            break;
+            //
+            case "mixed":
+                $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
+                $table=[];
+                $body=[];
+                $head=[];
+                $h_s=false;
+                foreach($result as $i=>$row){
+                            
+                    $line=[];
+                    if(!$h_s){
+                        foreach($row as $key=>$value){            
+                            $head[]=$key;
+    
+                        }
+                        $h_s=true;
+                    }
+                    else {
+                    }
+                    $line=[];
+                    foreach($row as $key=>$value){            
+                        $line[]=$value;
+                    }
+                    $body[]=$line;
+                }
+                $table['head']=$head;
+                $table['body']=$body;
+                    
+                return $table;
+            break;
+            //
+            default:
+                $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
+                $table=[];
+                foreach($result as $row){
+                            
+                    $line=[];
+                    foreach($row as $key=>$value){            
+            
+                        $line[$key]=$value;
+        
+                    }
+                
+                    $table[]=$line;
+                }
+                    
+                return $table;
+            }
+        }
+        catch(Exception $e){
+            die($e);
+            return null;
+        }
+
+
+    }
+
 }
 
 
