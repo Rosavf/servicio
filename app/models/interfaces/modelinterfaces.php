@@ -48,7 +48,7 @@ interface MySqlWriting extends MySqlConnecting{
 // HEREDAMOS CONEXION A MYSQL Y AGREGAMOS METODO DE LECTURA
 interface MySqlDataReading extends MySqlConnecting{
 
-    public function readAccounts();
+    public function readAccounts($table, $module);
     public function readData();
 
 }
