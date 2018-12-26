@@ -3,6 +3,7 @@
 class MySqlDataRead implements MySqlDataReading{
 
     protected $mySql;
+    protected $dataArray=[];
 
     public function attachMySql($mySql){
 
@@ -17,15 +18,15 @@ class MySqlDataRead implements MySqlDataReading{
 
     }
 
-    public function readAccounts(){
+    public function readAccounts($table,$module){
 
-
+        $accounts = $this->mySql->select($table,["Modulo", "Id_Cuenta"],"1","Id_Cuenta","assoc");
 
     }
 
     public function readData(){
 
-
+        //$this->mySql->select();
 
     }
     
