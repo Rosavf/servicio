@@ -7,7 +7,7 @@ class informe extends Controller{
         $this->model('endpoints','monthlyreport');
 
         $monthlyreport = new MonthlyReport();
-
+        
         $monthlyreport->execute($params);
 
     }
