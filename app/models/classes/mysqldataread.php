@@ -42,6 +42,8 @@ class MySqlDataRead implements MySqlDataReading{
 
         }
 
+        $this->accountArray=null;
+
         $this->dataArray['Data']=$results;
 
         echo(json_encode($this->dataArray));
