@@ -1,6 +1,6 @@
 <?php
 
-class MonthlyReport extends MySqlDataRead{
+final class MonthlyReport extends MySqlDataRead{
 
     public function __construct($table,$module){
 
