@@ -42,31 +42,27 @@ class MySqlDataRead implements MySqlDataReading{
 
             $row=[];
 
+            $i=0;
             foreach ($block as $line) {
 
                 $row["Id_Cuenta"] = $line["Id_Cuenta"];
                 $row["Concepto"] = $line["Concepto"];
                 $row["Super_Concepto"] = $line["Super_Concepto"];
-                $row["Meses"][]["Mes"]=$line["Mes"];
-                $row["Meses"][]["Subtotal"]=$line["Subtotal"];
+                $row["Meses"][$i]["Mes"]=$line["Mes"];
+                $row["Meses"][$i]["Subtotal"]=$line["Subtotal"];
                 $row["Llave"]=strval($line['Anualidad']).'-'.strval($line['Mes']).'-'.strval($line['Modulo']).'-'.strval($line['Modulo']);
 
             }
 
+            $i++;
             $this->dataArray[]=$row;
 
         }
 
-        print_r($this->dataArray);
+
+
 
     }
-
-
-
-
-        
-
-        
     
 
 }
