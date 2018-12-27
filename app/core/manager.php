@@ -25,6 +25,8 @@ require_once('../app/models/classes/bigqueryaccountimport.php');
 require_once('../app/models/classes/bigquerydataimport.php');
 require_once('../app/models/classes/mysqldatawrite.php');
 require_once('../app/models/classes/mysqldataread.php');
+require_once('../app/models/classes/mysqlclean.php');
+
 
 //enrutador
 require_once('router.php');
