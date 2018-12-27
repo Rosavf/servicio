@@ -54,17 +54,14 @@ class MySqlDataRead implements MySqlDataReading{
                 $i++;
             }
 
-
             $this->dataArray[]=$row;
 
         }
 
         print_r($this->dataArray);
 
-
     }
     
-
 }
 
 
