@@ -5,6 +5,7 @@ class MySqlDataRead implements MySqlDataReading{
     protected $mySql;
     protected $accountArray=[];   
     protected $dataArray=[];
+    protected $nestedArray=[];
 
     //
     public function attachMySql($mySql){
