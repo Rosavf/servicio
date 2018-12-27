@@ -2,7 +2,7 @@
 
 class limpiar extends Controller{
 
-    public function limpiar(){
+    public function limpiador(){
 
         $this->model('endpoints','cleaner');
         $cleaner = new Cleaner();
