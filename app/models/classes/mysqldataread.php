@@ -51,10 +51,10 @@ class MySqlDataRead implements MySqlDataReading{
                 $row["Meses"][$i]["Mes"]=$line["Mes"];
                 $row["Meses"][$i]["Subtotal"]=$line["Subtotal"];
                 $row["Llave"]=strval($line['Anualidad']).'-'.strval($line['Mes']).'-'.strval($line['Modulo']).'-'.strval($line['Modulo']);
-
+                $i++;
             }
 
-            $i++;
+
             $this->dataArray[]=$row;
 
         }
