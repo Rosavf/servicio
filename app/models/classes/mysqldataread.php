@@ -47,7 +47,8 @@ class MySqlDataRead implements MySqlDataReading{
                 $row["Id_Cuenta"] = $line["Id_Cuenta"];
                 $row["Concepto"] = $line["Concepto"];
                 $row["Super_Concepto"] = $line["Super_Concepto"];
-
+                $row["Meses"][]["Mes"]=$line["Mes"];
+                $row["Meses"][]["Subtotal"]=$line["Subtotal"];
 
             }
 
