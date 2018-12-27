@@ -58,7 +58,7 @@ class MySqlDataRead implements MySqlDataReading{
 
         }
 
-        print_r($this->dataArray);
+        echo(json_encode($this->dataArray));
 
     }
     
