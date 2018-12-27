@@ -29,17 +29,35 @@ class MySqlDataRead implements MySqlDataReading{
 
         $results=[];
 
+        //tomamos bloque con 3n meses
         for($i=0;$i<count($this->accountArray);$i++){
 
             $months = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto", "Mes" ,"Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
             
-
             $results[]=$months;
 
         }
 
-        print_r($results);
+        foreach ($results as $block) {
 
+            $row=[];
+
+            foreach ($block as $line) {
+
+                $row["Id_Cuenta"] = $line["Id_Cuenta"];
+                $row["Concepto"] = $line["Concepto"];
+                $row["Super_Concepto"] = $line["Super_Concepto"];
+
+
+            }
+
+            $this->dataArray[]=$row;
+
+        }
+
+
+
+        
     }
 
 
