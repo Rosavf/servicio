@@ -34,7 +34,7 @@ class MySqlDataRead implements MySqlDataReading{
             $months = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto", "Mes" ,"Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
             
 
-                $results[]=$row;
+            $results[]=$row;
 
         }
 
