@@ -77,7 +77,7 @@ class importar extends Controller{
 
     public function desglose($params){
 
-        $this->model('endpoints','breakdownimport');
+        $this->model('endpoints','breakdownimporter');
 
         $paramArray=explode("-",$params);
         $year=$paramArray[0];
