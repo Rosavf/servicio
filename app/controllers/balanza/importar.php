@@ -4,7 +4,6 @@ class importar extends Controller{
 
     public function mensual($params){
 
-
         $paramArray=explode("-",$params);
 
         $year=$paramArray[0];
@@ -78,7 +77,9 @@ class importar extends Controller{
 
     public function desglose($params){
 
-
+        $paramArray=explode("-",$params);
+        $year=$paramArray[0];
+        $month=$paramArray[1];
 
     }
 
