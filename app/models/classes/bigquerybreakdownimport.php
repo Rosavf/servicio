@@ -25,7 +25,6 @@ class BigQueryBreakdownImport extends BigQueryDataImport{
         $subquerys=null;
         $this->Array_Desgloses[] = $this->bigQuery->select($uniquery);
         $uniquery=null;
-
         print_r($this->breakdownArray);
 
     }
