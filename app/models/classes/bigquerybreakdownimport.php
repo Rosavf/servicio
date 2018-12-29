@@ -6,6 +6,8 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
 
     public function importBreakDown($year,$month,$module,$bigTable,$cecosTable,$accountsTable){
 
+        print_r($this->accountArray);
+
         $subquerys=[];
 
         foreach ($this->accountArray as $row) {
@@ -23,7 +25,7 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
 
         $uniquery=implode(" UNION ALL ", $subquerys);
         $subquerys=null;
-        $this->Array_Desgloses[] = $this->bigQuery->select($uniquery);
+        $this->breakdownArray[] = $this->bigQuery->select($uniquery);
         $uniquery=null;
 
         print_r($this->breakdownArray);
