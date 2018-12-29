@@ -1,6 +1,6 @@
 <?php
 
-class BreakdownImporter{
+class BreakdownImporter extends BigQueryBreakdownImport{
 
     public function __construct($year,$month,$module){
 
