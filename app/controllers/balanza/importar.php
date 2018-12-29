@@ -80,6 +80,7 @@ class importar extends Controller{
         $paramArray=explode("-",$params);
         $year=$paramArray[0];
         $month=$paramArray[1];
+        $this->model('endpoints','breakdownimport');
 
     }
 
