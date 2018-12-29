@@ -7,7 +7,7 @@ class BreakdownImporter extends BigQueryBreakdownImport{
         $this->attachBigQuery(new BigQueryParser());
         $this->importAccounts(ACCOUNTS_TABLE);
         $this->importBreakDown($year,$month,$module,BSEG_TABLE,CECOS_TABLE,ACCOUNTS_TABLE);
-        $this->attachBigQuery();
+        $this->detachBigQuery();
 
     }
 
