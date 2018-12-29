@@ -1,6 +1,6 @@
 <?php
 
-class BigQueryBreakdownImport extends BigQueryDataImport{
+class BigQueryBreakdownImport extends BigQueryAccountImport{
 
     private $breakdownArray=[];
 
@@ -25,6 +25,7 @@ class BigQueryBreakdownImport extends BigQueryDataImport{
         $subquerys=null;
         $this->Array_Desgloses[] = $this->bigQuery->select($uniquery);
         $uniquery=null;
+
         print_r($this->breakdownArray);
 
     }
