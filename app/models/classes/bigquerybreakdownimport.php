@@ -8,7 +8,7 @@ class BigQueryBreakdownImport extends BigQueryDataImport{
 
         $subquerys=[];
 
-        foreach ($this->Tabla_Cuentas as $row) {
+        foreach ($this->accountTable as $row) {
 
             $dml = 'SELECT "'.$module.'" AS MODULO,'.$row['ID'].' AS ID, '.' DMBTR AS MONTO, CAST(SUBSTR(BUDAT,1,4) AS INT64) AS ANUALIDAD, CAST(SUBSTR(BUDAT,5,2) AS INT64) AS MES, BUDAT AS FECHA, PSWSL AS MONEDA, KOSTL AS CECO, BKTXT AS DESCRIPCION FROM'.
             ' '.$bigTable.' '.
