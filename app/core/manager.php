@@ -23,6 +23,7 @@ require_once('../app/controllers/classes/controller.php');
 require_once('../app/models/classes/bigqueryconnection.php');
 require_once('../app/models/classes/bigqueryaccountimport.php');
 require_once('../app/models/classes/bigquerydataimport.php');
+require_once('../app/models/classes/bigquerybreakdownimport.php');
 require_once('../app/models/classes/mysqldatawrite.php');
 require_once('../app/models/classes/mysqldataread.php');
 require_once('../app/models/classes/mysqlclean.php');
