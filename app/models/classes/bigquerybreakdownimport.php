@@ -30,8 +30,6 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
 
     }
 
-    
-
 }
 
 ?>
