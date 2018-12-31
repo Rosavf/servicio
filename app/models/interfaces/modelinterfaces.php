@@ -19,7 +19,7 @@ interface BigQueryAccountImporting extends BigQueryConnecting{
 
 }
 
-//IMPORTA DATOS DE LA TABLA BSEG
+//IMPORTA DATOS DE LA TABLA ACCOUNTS
 interface BigQueryDataImporting extends BigQueryAccountImporting{
 
     public function importData($year,$month,$modulo,$operator,$bigTable,$cecosTable);
