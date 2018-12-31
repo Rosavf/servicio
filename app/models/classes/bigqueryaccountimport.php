@@ -17,7 +17,6 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         }
 
- 
     }
 
 }
