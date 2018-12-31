@@ -2,19 +2,30 @@
 
 class MySqlBreakdownRead{
 
+    protected $mySql;
 
-    public function readBreakDown(){
+    protected $breakdownArray=[];
 
-        
+    public function attachMySql($mySql){
 
-
-
+        $this->mySql= new crud('localhost','root','Pit2018mtv#@','INFORME');
 
     }
 
+    public function detachMySql(){
+
+        $this->mySql=null;
+
+    }
+
+    public function readBreakDown($table,$year,$month,$module){
+
+        $breakdown = $this->mySql->select('Desglose',['Monto', 'Descripcion','Fecha','Moneda'],"Modulo = '".$module."' AND Mes = ".$month." AND Anualidad = ".$year." AND Id_Cuenta = ".$id,'Id_Cuenta','assoc');
+
+        print_r($breakdown);
+        
+    }
+
 }
-
-
-
 
 ?>
