@@ -22,7 +22,7 @@ class MySqlBreakdownRead{
 
         $breakdown = $this->mySql->select('Desglose',['Monto', 'Descripcion','Fecha','Moneda'],"Modulo = '".$module."' AND Mes = ".$month." AND Anualidad = ".$year." AND Id_Cuenta = ".$id,'Id_Cuenta','assoc');
 
-        print_r($breakdown);
+        echo(json_encode($breakdown));
         
     }
 
