@@ -3,6 +3,7 @@
 class MySqlSummaryRead{
 
     private $accountArray=[];
+    
     protected $mySql=null;
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
     protected $moduleArray=[];
