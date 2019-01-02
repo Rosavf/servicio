@@ -28,7 +28,7 @@ class MySqlSummaryRead{
 
             $module = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
 
-            
+            print_r($module);
 
         }
 
