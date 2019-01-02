@@ -3,7 +3,7 @@
 class MySqlSummaryRead{
 
     private $accountArray=[];
-    
+
     protected $mySql=null;
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
     protected $moduleArray=[];
@@ -21,7 +21,7 @@ class MySqlSummaryRead{
 
     }
 
-    public function readModules($year,$month){
+    public function readModules($month){
 
         $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
