@@ -1,6 +1,6 @@
 <?php
 
-class BreakdownReader extends MySqlBreakdownRead{
+final class BreakdownReport extends MySqlBreakdownRead{
 
     public function __construct(){
 
