@@ -23,6 +23,13 @@ class informe extends Controller{
 
     }
 
+    public function resumen($params){
+
+        $this->model('endpoints','resumen');
+        $breakdownReport = new BreakdownReport('Mensual',$params);
+
+    }
+
 }
 
 ?>
