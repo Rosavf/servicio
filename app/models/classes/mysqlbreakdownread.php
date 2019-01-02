@@ -8,7 +8,9 @@ class MySqlBreakdownRead{
 
     public function attachMySql($mySql){
 
-        $this->mySql= new crud('localhost','root','Pit2018mtv#@','INFORME');
+        $this->mySql = new $mySql;
+        $this->mySql->begin('localhost','root','Pit2018mtv#@','INFORME');
+
 
     }
 
