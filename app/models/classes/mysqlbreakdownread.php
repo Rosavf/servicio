@@ -20,7 +20,7 @@ class MySqlBreakdownRead{
 
     public function readBreakDown($table,$year,$month,$module,$id){
 
-        $breakdown = $this->mySql->select('Desglose',['Monto', 'Descripcion','Fecha','Moneda'],"Modulo = '".$module."' AND Mes = ".$month." AND Anualidad = ".$year." AND Id_Cuenta = ".$id,'Id_Cuenta','assoc');
+        $breakdown = $this->mySql->select($table,['Monto', 'Descripcion','Fecha','Moneda'],"Modulo = '".$module."' AND Mes = ".$month." AND Anualidad = ".$year." AND Id_Cuenta = ".$id,'Id_Cuenta','assoc');
 
         echo(json_encode($breakdown));
         
