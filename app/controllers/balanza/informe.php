@@ -9,6 +9,13 @@ class informe extends Controller{
 
     }
 
+    public function acumulado($module){
+
+        $this->model('endpoints','monthlyreport');
+        $monthlyreport = new MonthlyReport('Mensual_Acumulado',$module);
+
+    }
+
     public function desglose($params){
 
         $this->model('endpoints','breakdownreport');
