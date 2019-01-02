@@ -8,6 +8,7 @@ class MySqlSummaryRead{
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
     protected $moduleArray=[];
 
+    //
     public function attachMySql($mySql){
 
         $this->mySql=$mySql;
@@ -15,14 +16,15 @@ class MySqlSummaryRead{
 
     }
 
+    //
     public function detachMySql(){
 
         $this->mySql=null;
 
     }
 
+    //
     public function readModules($year,$month){
-
 
         foreach ($this->moduleArray as $key => $value) {
 

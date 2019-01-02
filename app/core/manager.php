@@ -15,7 +15,6 @@ require_once('../app/lib/bigquery.php');
 require_once('../app/lib/bigqueryparser.php');
 require_once('../app/lib/pdocrud.php');
 
-
 //controlador maestro
 require_once('../app/controllers/classes/controller.php');
 
@@ -28,7 +27,7 @@ require_once('../app/models/classes/mysqldatawrite.php');
 require_once('../app/models/classes/mysqldataread.php');
 require_once('../app/models/classes/mysqlbreakdownread.php');
 require_once('../app/models/classes/mysqlclean.php');
-
+require_once('../app/models/classes/mysqlsummaryread.php');
 
 //enrutador
 require_once('router.php');
