@@ -4,8 +4,9 @@ class MySqlSummaryRead{
 
     protected $mySql;
     protected $accountArray=[];   
-    protected $readArray=[];
-    protected $dataArray=[];
+    protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
+    protected $moduleArray=[];
+
 
     //
     public function attachMySql($mySql){
@@ -25,23 +26,9 @@ class MySqlSummaryRead{
     //
     public function readModules(){
 
-        
+        $this->accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
     }
-
-    public function readTotals(){
-
-
-
-    }
-
-    public function readSum(){
-
-
-
-    }
-
-
     
 }
 
