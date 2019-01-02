@@ -9,10 +9,10 @@ class informe extends Controller{
 
     }
 
-    public function desglose($module){
+    public function desglose($params){
 
         $this->model('endpoints','breakdownreport');
-        $monthlyreport = new MonthlyReport('Mensual',$module);
+        $breakdownReport = new BreakdownReport('Desglose',$params);
 
     }
 
