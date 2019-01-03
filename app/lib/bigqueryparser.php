@@ -15,9 +15,9 @@ class BigQueryParser extends BigQuery{
 
                 if(is_array($cell)){
 
-                    $type=count(array_keys($cell));
+                    $type=array_keys($cell);
 
-                    echo($type);
+                    print_r($type);
 
                 }
 
