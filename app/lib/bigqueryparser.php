@@ -78,7 +78,7 @@ class BigQueryParser extends BigQuery{
                         default: break;
                     }
 
-                    $line[]=$line1;
+                    $line[$key]=$line1;
 
                 }
 
@@ -90,7 +90,7 @@ class BigQueryParser extends BigQuery{
 
             }
 
-            $table[$key]=$line;
+            $table[]=$line;
 
         }
 
