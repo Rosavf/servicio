@@ -156,7 +156,17 @@ class BigQueryParser extends BigQuery{
 
                                         foreach ($cell1 as $key2 => $cell2) {
 
-                                            
+                                            if(is_array($cell2)){
+
+
+
+                                            }
+    
+                                            else{
+    
+                                                $line2[$key2]=$cell2;
+    
+                                            }
 
                                         }
 
