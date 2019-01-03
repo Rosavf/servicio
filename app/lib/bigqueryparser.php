@@ -40,7 +40,8 @@ class BigQueryParser extends BigQuery{
 
                             if(is_array($cell1)){
 
-
+                                $keys1=array_keys($cell1);
+                                $tipe1;
 
                             }
 
@@ -89,7 +90,7 @@ class BigQueryParser extends BigQuery{
 
             }
 
-            $table[]=$line;
+            $table[$key]=$line;
 
         }
 
