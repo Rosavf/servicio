@@ -91,6 +91,8 @@ class importar extends Controller{
 
         $this->model('endpoints','filterimport');
 
+        $filterImport = new FilterImport();
+
     }
 
 }

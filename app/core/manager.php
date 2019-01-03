@@ -6,11 +6,11 @@ ini_set('memory_limit', '2048M');
 //archivos de configuracion
 require_once('../app/config/config.php');
 
-//interfaces
+//interfaces modelos
 require_once('../app/lib/interfaces/libinterfaces.php');
 require_once('../app/models/interfaces/modelinterfaces.php');
 
-//interfaces
+//interfaces librerias
 require_once('../app/lib/bigquery.php');
 require_once('../app/lib/bigqueryparser.php');
 require_once('../app/lib/pdocrud.php');
