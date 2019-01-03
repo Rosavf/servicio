@@ -5,6 +5,7 @@ class BigQueryConnection implements BigQueryConnecting{
 
     protected $bigQuery;
 
+    //
     public  function attachBigQuery($bigQuery){
 
         $this->bigQuery=$bigQuery;
@@ -12,6 +13,7 @@ class BigQueryConnection implements BigQueryConnecting{
 
     }
 
+    //
     public  function detachBiqQuery(){
 
         $this->bigQuery=null;
