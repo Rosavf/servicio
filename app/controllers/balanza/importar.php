@@ -87,9 +87,9 @@ class importar extends Controller{
 
     }
 
-    public function filtros($params){
+    public function filtros(){
 
-
+        $this->model('endpoints','filterimport');
 
     }
 
