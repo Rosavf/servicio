@@ -15,12 +15,33 @@ class BigQueryParser extends BigQuery{
 
                 if(is_array($cell)){
 
+                    $type;
                     $keys=array_keys($cell);
 
                     if((count($keys)==0)||($keys[0]==0)){
 
-                        echo("OK");
+                        $type="assoc";
 
+                    }
+
+                    else{
+
+                        $type="num";
+
+                    }
+
+
+                    switch ($type) {
+
+                        case 'assoc': 
+                        
+                            echo("a"); 
+                        
+                        break;
+
+                        case 'num': echo("n"); break;
+                        
+                        default: break;
                     }
 
 
