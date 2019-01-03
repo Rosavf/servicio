@@ -1,6 +1,6 @@
 <?php
 
-class FilterImport extends BigQueryFilterImport{
+final class FilterImport extends BigQueryFilterImport{
 
     public function __contruct(){
 

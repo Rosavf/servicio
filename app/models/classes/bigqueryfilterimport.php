@@ -13,6 +13,8 @@ class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterI
 
         print_r($this->accountFilters);
 
+        echo('ok');
+
     }
 
     //

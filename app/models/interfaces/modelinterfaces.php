@@ -63,7 +63,6 @@ interface BigQueryFilterImporting extends BigQueryConnecting{
     public function importAccountFilters($accountTable);
     public function importCostCenterFilters($accountTable);
 
-
 }
 
 ?>
