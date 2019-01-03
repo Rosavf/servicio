@@ -6,7 +6,7 @@ final class FilterImport extends BigQueryFilterImport{
 
         $this->attachBigQuery(new BigQueryParser());
         $this->importAccountFilters("CUENTAS");
-        $this->detachBigQuery();
+        $this->detachBiqQuery();
 
     }
 

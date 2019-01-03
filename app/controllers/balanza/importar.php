@@ -2,13 +2,13 @@
 
 class importar extends Controller{
 
+    //
     public function mensual($params){
 
         $paramArray=explode("-",$params);
 
         $year=$paramArray[0];
         $month=$paramArray[1];
-
 
         $this->model('endpoints','dataimporter');
         $dataImporter=new DataImporter($year,$month,"BANCO","=","Mensual");
@@ -39,13 +39,13 @@ class importar extends Controller{
 
     }
 
+    //
     public function acumulado($params){
 
         $paramArray=explode("-",$params);
 
         $year=$paramArray[0];
         $month=$paramArray[1];
-
 
         $this->model('endpoints','dataimporter');
         $dataImporter=new DataImporter($year,$month,"BANCO","<=","Mensual_Acumulado");
@@ -75,6 +75,7 @@ class importar extends Controller{
 
     }
 
+    //
     public function desglose($params){
 
         $this->model('endpoints','breakdownimporter');
@@ -87,11 +88,12 @@ class importar extends Controller{
 
     }
 
+    //
     public function filtros(){
 
         $this->model('endpoints','filterimport');
-
         $filterImport = new FilterImport();
+        $filterImport=null;
 
     }
 
