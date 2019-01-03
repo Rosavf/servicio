@@ -20,13 +20,13 @@ class BigQueryParser extends BigQuery{
 
                     if((count($keys)==0)||($keys[0]==0)){
 
-                        $type="assoc";
+                        $type="num";
 
                     }
 
                     else{
 
-                        $type="num";
+                        $type="assoc";
 
                     }
 
