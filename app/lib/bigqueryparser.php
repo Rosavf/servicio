@@ -15,6 +15,7 @@ class BigQueryParser extends BigQuery{
 
                 if(is_array($cell)){
 
+                    $line1=[];
                     $type;
                     $keys=array_keys($cell);
 
@@ -35,11 +36,28 @@ class BigQueryParser extends BigQuery{
 
                         case 'assoc': 
                         
-                            echo("a"); 
                         
                         break;
 
-                        case 'num': echo("n"); break;
+                        case 'num': 
+                        
+                        foreach ($cell as $cell1) {
+
+                            if(is_array($cell)){
+
+
+
+                            }
+
+                            else{
+
+
+
+                            }
+
+                        }
+                                                
+                        break;
                         
                         default: break;
                     }
