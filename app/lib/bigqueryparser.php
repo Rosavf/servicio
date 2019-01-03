@@ -16,7 +16,6 @@ class BigQueryParser extends BigQuery{
                 if(is_array($cell)){
 
 
-
                 }
 
                 else{

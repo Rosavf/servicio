@@ -87,6 +87,12 @@ class importar extends Controller{
 
     }
 
+    public function filtros($params){
+
+
+
+    }
+
 }
 
 ?>

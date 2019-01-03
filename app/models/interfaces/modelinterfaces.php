@@ -57,4 +57,13 @@ interface MySqlCleaning extends MySqlConnecting{
 
 }
 
+//IMPORTA DATOS DE LA TABLA BSEG
+interface BigQueryFilterImporting extends BigQueryConnecting{
+
+    public function importAccountFilters($accountTable);
+    public function importCostCenterFilters($accountTable);
+
+
+}
+
 ?>
