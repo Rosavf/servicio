@@ -35,15 +35,10 @@ class BigQueryParser extends BigQuery{
                     switch ($type) {
 
                         case 'assoc': 
-                        
-                        
-                        break;
 
-                        case 'num': 
-                        
-                        foreach ($cell as $cell1) {
+                        foreach ($cell as $key1=>$cell1) {
 
-                            if(is_array($cell)){
+                            if(is_array($cell1)){
 
 
 
@@ -51,7 +46,27 @@ class BigQueryParser extends BigQuery{
 
                             else{
 
+                                $line1[$key1]=$cell1;
 
+                            }
+
+                        }
+                        
+                        break;
+
+                        case 'num': 
+                        
+                        foreach ($cell as $cell1) {
+
+                            if(is_array($cell1)){
+
+
+
+                            }
+
+                            else{
+
+                                $line1[]=$cell1;
 
                             }
 
@@ -62,6 +77,7 @@ class BigQueryParser extends BigQuery{
                         default: break;
                     }
 
+                    $line[]=$line1;
 
                 }
 
