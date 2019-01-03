@@ -4,14 +4,18 @@ class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterI
 
     protected $accountFilters=[];
 
+    //
     public function importAccountFilters($accountTable){
 
         $dml='SELECT * FROM `informe-211921.MULTIVA.CUENTAS`;';
 
-        $this->bigQuery->select($dml);
+        $this->accountFilters=$this->bigQuery->select($dml);
+
+        print_r($this->accountFilters);
 
     }
 
+    //
     public function importCostCenterFilters($accountTable){
 
         
