@@ -1,5 +1,6 @@
 <?php
 
+//
 class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterImporting{
 
     //
