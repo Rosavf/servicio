@@ -9,7 +9,7 @@ class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterI
 
         $dml='SELECT * FROM `informe-211921.MULTIVA.CUENTAS`;';
         $accountFilters=$this->bigQuery->select($dml);
-        print_r($accountFilters);
+        echo(json_encode($accountFilters));
 
     }
 
