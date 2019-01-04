@@ -1,6 +1,6 @@
 <?php
 
-final class FilterImport extends BigQueryFilterImport{
+final class FilterCecosImport extends BigQueryFilterImport{
 
     public function __construct(){
 
