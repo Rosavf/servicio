@@ -89,10 +89,10 @@ class importar extends Controller{
     }
 
     //
-    public function filtros(){
+    public function filtros($module){
 
         $this->model('endpoints','filteraccountimport');
-        $filterImport = new FilterAccountImport();
+        $filterImport = new FilterAccountImport($module);
         $filterImport=null;
 
     }

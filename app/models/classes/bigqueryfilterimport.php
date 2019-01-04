@@ -4,7 +4,7 @@
 class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterImporting{
 
     //
-    public function importAccountFilters($accountTable){
+    public function importAccountFilters($accountTable,$module){
 
         $dml='SELECT * FROM `informe-211921.MULTIVA.CUENTAS`;';
         $accountFilters=$this->bigQuery->select($dml);
@@ -13,7 +13,7 @@ class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterI
     }
 
     //
-    public function importCostCenterFilters($accountTable){
+    public function importCostCenterFilters($accountTable,$module){
 
         $dml='SELECT * FROM `informe-211921.MULTIVA.CECOS`;';
         $cecostFilters=$this->bigQuery->select($dml);
