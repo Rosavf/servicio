@@ -61,7 +61,7 @@ interface MySqlCleaning extends MySqlConnecting{
 interface BigQueryFilterImporting extends BigQueryConnecting{
 
     public function importAccountFilters($accountTable,$module);
-    public function importCostCenterFilters($accountTable);
+    public function importCostCenterFilters($accountTable,$module);
 
 }
 
