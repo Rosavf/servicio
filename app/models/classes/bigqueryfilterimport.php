@@ -6,8 +6,7 @@ class BigQueryFilterImport extends BigqueryConnection implements BigQueryFilterI
     //
     public function importAccountFilters($accountTable,$module){
 
-        $dml='SELECT * FROM '.'`'.'informe-211921.MULTIVA.'.
-        $module.'`;';
+        $dml='SELECT * FROM '.'`'.'informe-211921.MULTIVA.'.$module.'`;';
         $accountFilters=$this->bigQuery->select($dml);
         echo(json_encode($accountFilters));
 
