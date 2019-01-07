@@ -6,16 +6,16 @@ class BigQueryFilterExport extends BigQueryConnection{
 
         for ($i=0; $i < count($filters); $i++) { 
 
-
+            
 
         }
 
     }
 
-    public function updateAccountFilters(){
+    public function updateAccountFilters($table,$module){
 
 
-        
+
     }
 
 }
