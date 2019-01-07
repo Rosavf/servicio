@@ -27,9 +27,11 @@ class BigQueryFilterExport extends BigQueryConnection{
 
             $accounts=[];
 
-            if($row[1]){$accounts[]="5200";}
-            if($row[2]){$accounts[]="5300";}
-            if($row[3]){$accounts[]="5500";}
+            if($row[1]){$accounts[]="5200";}else{  }
+            if($row[2]){$accounts[]="5300";}else{  }
+            if($row[3]){$accounts[]="5500";}else{  }
+
+
 
             $this->filterArray[]=$filterLine;
 
