@@ -41,11 +41,10 @@ class BigQueryFilterExport extends BigQueryConnection{
 
     public function updateAccountFilters($module,$table){
 
-
-
         foreach ($this->filterArray as $row) {
 
-            $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['PAGADO'].', SOCIEDADES = '.'["'.implode('","',$row['SOCIEDADES']).'"]';
+            $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['PAGADO'].', SOCIEDADES = '.
+            '["'.implode('","',$row['SOCIEDADES']).'"]'.' WHERE ID ='.'"'.$row['ID'];
 
             echo($dml);
 
