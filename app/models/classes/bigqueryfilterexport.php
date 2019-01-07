@@ -31,7 +31,7 @@ class BigQueryFilterExport extends BigQueryConnection{
             if($row[2]){$accounts[]="5300";}else{  }
             if($row[3]){$accounts[]="5500";}else{  }
 
-
+            $filterLine['SOCIEDADES'] = $accounts;
 
             $this->filterArray[]=$filterLine;
 
