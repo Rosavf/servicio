@@ -66,7 +66,6 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
     }
 
-
 }
 
 
