@@ -14,7 +14,7 @@ class filtros extends Controller{
 
         $request=$_POST['req'];
         $this->model('endpoints','filterexport');
-        $filterExport = new BigQueryFilterExport($module,$request);
+        $filterExport = new FilterExport($module,$request);
 
     }
 
