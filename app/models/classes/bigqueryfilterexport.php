@@ -17,7 +17,6 @@ class BigQueryFilterExport extends BigQueryConnection{
 
         }
 
-
     }
 
     public function updateAccountFilters($table){
