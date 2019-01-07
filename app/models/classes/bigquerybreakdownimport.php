@@ -6,8 +6,6 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
 
     public function importBreakDown($year,$month,$module,$bigTable,$cecosTable,$accountsTable){
 
-        print_r($this->accountArray);
-
         $subquerys=[];
 
         foreach ($this->accountArray as $row) {
@@ -18,6 +16,8 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
             ' AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).
             ' AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'")'.
             ' AND HKONT = (SELECT HKONT FROM '.$accountsTable.' WHERE ID = "'.$row['ID'].'")';
+
+            echo($dml);
 
             $subquerys[]=$dml;
                     
