@@ -2,12 +2,20 @@
 
 class BigQueryFilterExport extends BigQueryConnection{
 
-    protected $filterPostRequest;
+    public function readPostRequest($module,$filters){
 
-    public function exportAccountFilters(){
+        for ($i=0; $i < count($filters); $i++) { 
 
 
 
+        }
+
+    }
+
+    public function updateAccountFilters(){
+
+
+        
     }
 
 }

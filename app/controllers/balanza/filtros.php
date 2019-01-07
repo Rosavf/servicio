@@ -14,7 +14,6 @@ class filtros extends Controller{
 
         $request=$_POST['req'];
 
-        echo($request);
 
     }
 
