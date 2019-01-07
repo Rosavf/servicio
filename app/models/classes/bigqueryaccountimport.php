@@ -9,7 +9,7 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         $dml = 'SELECT ID, HKONT, CONCEPTO, SUPERCONCEPTO, '.
 
-        "CONCAT('" . '"' . "',ARRAY_TO_STRING(SOCIEDADES,'" . ',"' . "')" . ",'" .'"'.  "')".
+        "CONCAT('" . '"' . "',ARRAY_TO_STRING(SOCIEDADES,'" . '","' . "')" . ",'" .'"'.  "')".
 
         'AS SOCIEDADES FROM '.$accountTable.' WHERE MODULO = "'.$module.'" '.' ORDER BY ID';
 
