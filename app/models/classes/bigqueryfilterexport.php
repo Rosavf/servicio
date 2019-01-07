@@ -27,9 +27,9 @@ class BigQueryFilterExport extends BigQueryConnection{
 
             $accounts=[];
 
-            if($row[1]){$accounts[]="5200";}else{  }
-            if($row[2]){$accounts[]="5300";}else{  }
-            if($row[3]){$accounts[]="5500";}else{  }
+            if($row[1]){$accounts[]="5200";}else{ $accounts[]="0"; }
+            if($row[2]){$accounts[]="5300";}else{ $accounts[]="00"; }
+            if($row[3]){$accounts[]="5500";}else{ $accounts[]="000"; }
 
             $filterLine['SOCIEDADES'] = $accounts;
 
@@ -39,9 +39,15 @@ class BigQueryFilterExport extends BigQueryConnection{
 
     }
 
-    public function updateAccountFilters($table){
+    public function updateAccountFilters($module,$table){
 
-        print_r($this->filterArray);
+        foreach ($this->filterArray as $row) {
+
+            $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['pagado'];
+
+            echo($dml);
+
+        }
         
     }
 
