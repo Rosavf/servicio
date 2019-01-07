@@ -13,15 +13,16 @@ class BigQueryFilterExport extends BigQueryConnection{
             $filterLine['ID']=strval($i+1);
             $filterLine['PAGADO']=strval($i+1);
 
-            $filterArray[]=$filterLine;
+            $this->filterArray[]=$filterLine;
 
         }
+
 
     }
 
     public function updateAccountFilters($table){
 
-
+        print_r($this->filterArray);
 
     }
 
