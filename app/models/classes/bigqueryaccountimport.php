@@ -7,7 +7,7 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
     //importamos las cuentas desde la tabla de cuentas en BigQuery
     public function importAccounts($module,$accountTable){
 
-        $dml = 'SELECT ID, HKONT, CONCEPTO, SUPERCONCEPTO, '.
+        $dml = 'SELECT ID, HKONT, CONCEPTO, PAGADO, SUPERCONCEPTO, '.
 
         "CONCAT('" . '"' . "',ARRAY_TO_STRING(SOCIEDADES,'" . '","' . "')" . ",'" .'"'.  "')".
 
