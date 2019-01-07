@@ -46,7 +46,7 @@ class importar extends Controller{
         $module=$paramArray[2];
 
         $this->model('endpoints','breakdownimporter');
-        $breakdownImporter = new BreakdownImporter($year,$month,"CASA");
+        $breakdownImporter = new BreakdownImporter($year,$month,$module);
         $breakdownImporter = null;
 
     }
