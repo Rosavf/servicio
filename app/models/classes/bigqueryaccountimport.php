@@ -5,7 +5,7 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
     protected $accountArray=[]; //arreglo que guarda las cuentas obtenidas
 
     //importamos las cuentas desde la tabla de cuentas en BigQuery
-    public function importAccounts($accountTable){
+    public function importAccounts($module,$accountTable){
 
         $dml = 'SELECT ID, HKONT, CONCEPTO, SUPERCONCEPTO FROM '.$accountTable.' ORDER BY ID';
 
