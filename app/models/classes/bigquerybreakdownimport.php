@@ -17,7 +17,7 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
             ' AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'")'.
             ' AND HKONT = (SELECT HKONT FROM '.$accountsTable.' WHERE ID = "'.$row['ID'].'")';
 
-            echo($dml);
+            echo($dml."<br><br><br>");
 
             $subquerys[]=$dml;
                     
