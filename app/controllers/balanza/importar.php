@@ -39,11 +39,13 @@ class importar extends Controller{
     //
     public function desglose($params){
 
-        $this->model('endpoints','breakdownimporter');
 
         $paramArray=explode("-",$params);
         $year=$paramArray[0];
         $month=$paramArray[1];
+        $module=$paramArray[2];
+
+        $this->model('endpoints','breakdownimporter');
         $breakdownImporter = new BreakdownImporter($year,$month,"CASA");
         $breakdownImporter = null;
 
