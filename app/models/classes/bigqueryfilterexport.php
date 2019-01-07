@@ -5,7 +5,7 @@ class BigQueryFilterExport extends BigQueryConnection implements BigQueryFilterE
     public function exportAccountFilters($accountTable,$module){
 
 
-        
+                
 
 
     }
