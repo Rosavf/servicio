@@ -28,12 +28,9 @@ class importar extends Controller{
         $month=$paramArray[1];
         $module=$paramArray[2];
 
-
         $this->model('endpoints','dataimporter');
         $dataImporter=new DataImporter($year,$month,$module,"<=","Mensual_Acumulado");
         $dataImporter=null;
-
-
 
         echo('success');               
 
