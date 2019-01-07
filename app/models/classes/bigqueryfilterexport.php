@@ -15,7 +15,7 @@ class BigQueryFilterExport extends BigQueryConnection{
             $filterLine['ID']=strval($i+1);
 
             switch ($row[0]) {
-                case 'true': $filterLine['ID']="FALSE";
+                case 'true': $filterLine['PAGADO']="FALSE";
 
                     break;
 
