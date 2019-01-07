@@ -31,7 +31,7 @@ class BigQueryFilterExport extends BigQueryConnection{
 
     public function updateAccountFilters($table){
 
-        print_r($this->filterArray);
+        //print_r($this->filterArray);
 
     }
 
