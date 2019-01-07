@@ -6,7 +6,6 @@ class BigQueryFilterExport extends BigQueryConnection{
 
     public function readPostRequest($module,$filters){
 
-        print_r($filters);
 
         for ($i=0; $i < count($filters); $i++) { 
 
@@ -15,12 +14,12 @@ class BigQueryFilterExport extends BigQueryConnection{
             $filterLine['ID']=strval($i+1);
 
             switch ($row[0]) {
-                
-                case 'true': $filterLine['PAGADO']="TRUE";
+
+                case true: $filterLine['PAGADO']="TRUE";
 
                     break;
 
-                case 'false': $filterLine['PAGADO']="FALSE";
+                case false: $filterLine['PAGADO']="FALSE";
                 
                     break;
                 
