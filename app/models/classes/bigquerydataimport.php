@@ -20,8 +20,6 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 'AND HKONT = "'.strval($row['HKONT']).'")';
                         
                 $subquerys[]=$dml;
-
-                echo($dml."<br><br><br>");
                             
             }
 
