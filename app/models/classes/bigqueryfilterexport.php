@@ -4,27 +4,17 @@ class BigQueryFilterExport extends BigQueryConnection implements BigQueryFilterE
 
     protected $filterPostRequest;
 
-    public function readPostRequest(){
+    public function exportAccountFilters($accountTable,$module){
 
-        if(isset($_POST['req'])){
+        for ($i=0; $i < $this->filterPostRequest; $i++) { 
 
-            $this->filterPostRequest=$_POST['req'];
-            
-            print_r($this->filterPostRequest);
+            $row=$this->filterPostRequest[$i];
 
         }
 
     }
 
-    public function exportAccountFilters($accountTable,$module){
-
-
-
-
-    }
-
     public function exportCostCenterFilters($accountTable,$module){
-
 
 
 
