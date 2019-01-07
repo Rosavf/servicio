@@ -11,7 +11,16 @@ class BigQueryFilterExport extends BigQueryConnection{
             $row=$filters[$i];
             $filterLine=[];
             $filterLine['ID']=strval($i+1);
-            $filterLine['PAGADO']=strval($i+1);
+
+            switch ($variable) {
+                case 'value':
+                    # code...
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
 
             $this->filterArray[]=$filterLine;
 

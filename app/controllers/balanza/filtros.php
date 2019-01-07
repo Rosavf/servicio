@@ -12,7 +12,7 @@ class filtros extends Controller{
 
     public function exportar($module){
 
-        $request=$_POST['req'];
+        $request=json_decode($_POST['req']);
         $this->model('endpoints','filterexport');
         $filterExport = new FilterExport($module,$request);
 
