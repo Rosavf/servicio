@@ -47,7 +47,7 @@ class BigQueryFilterExport extends BigQueryConnection{
 
             $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['PAGADO'];
 
-            $accounts=implode($row['']);
+            $accounts=implode($row['SOCIEDADES']);
 
 
         }
