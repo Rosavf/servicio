@@ -9,15 +9,18 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         $dml = 'SELECT ID, HKONT, CONCEPTO, SUPERCONCEPTO FROM '.$accountTable.' ORDER BY ID';
 
-        echo($dml."<br><br>");
-
         $accountResult = $this->bigQuery->select($dml);
+
+        print_r($accountResult);
 
         foreach ($accountResult as $i => $row) {
 
             $this->accountArray[$i] = $row;
 
         }
+
+
+
 
     }
 
