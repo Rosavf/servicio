@@ -9,6 +9,11 @@ class BigQueryFilterExport extends BigQueryConnection{
         for ($i=0; $i < count($filters); $i++) { 
 
             $row=$filters[$i];
+            $filterLine=[];
+            $filterLine['ID']=strval($i+1);
+            $filterLine['PAGADO']=strval($i+1);
+
+            $filterArray[]=$filterLine;
 
         }
 
