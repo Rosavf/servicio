@@ -12,14 +12,15 @@ class BigQueryFilterExport extends BigQueryConnection{
             $filterLine=[];
             $filterLine['ID']=strval($i+1);
 
-            switch ($variable) {
-                case 'value':
-                    # code...
+            switch ($row[0]) {
+                case true: $filterLine['ID']="FALSE";
+
+                    break;
+
+                case true: $filterLine['ID']="FALSE";
+                
                     break;
                 
-                default:
-                    # code...
-                    break;
             }
 
             $this->filterArray[]=$filterLine;
