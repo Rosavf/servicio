@@ -12,8 +12,6 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         ' FROM '.$accountTable.' WHERE MODULO = "'.$module.'" '.' ORDER BY ID';
 
-        echo($dml);
-
         $accountResult = $this->bigQuery->select($dml);
 
         foreach ($accountResult as $i => $row) {
@@ -21,6 +19,8 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
             $this->accountArray[$i] = $row;
 
         }
+
+        print_r($this->accountArray);
 
     }
 
