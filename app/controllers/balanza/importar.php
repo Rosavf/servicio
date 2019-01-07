@@ -39,7 +39,6 @@ class importar extends Controller{
     //
     public function desglose($params){
 
-
         $paramArray=explode("-",$params);
         $year=$paramArray[0];
         $month=$paramArray[1];
@@ -48,6 +47,8 @@ class importar extends Controller{
         $this->model('endpoints','breakdownimporter');
         $breakdownImporter = new BreakdownImporter($year,$month,$module);
         $breakdownImporter = null;
+
+        echo('success');               
 
     }
 
