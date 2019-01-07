@@ -13,7 +13,8 @@ class filtros extends Controller{
     public function exportar($module){
 
         $request=$_POST['req'];
-
+        $this->model('endpoints','filterexport');
+        $filterExport = new BigQueryFilterExport($module,$request);
 
     }
 
