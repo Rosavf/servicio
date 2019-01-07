@@ -9,29 +9,10 @@ class importar extends Controller{
 
         $year=$paramArray[0];
         $month=$paramArray[1];
+        $module=$paramArray[2];
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"BANCO","=","Mensual");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"CASA","=","Mensual");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"GRUPO","=","Mensual");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"OPERADORA","=","Mensual");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SAVELLA","=","Mensual");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SERVICIOS","=","Mensual");
+        $dataImporter=new DataImporter($year,$month,$module,"=","Mensual");
         $dataImporter=null;
 
         echo('success');
@@ -45,30 +26,14 @@ class importar extends Controller{
 
         $year=$paramArray[0];
         $month=$paramArray[1];
+        $module=$paramArray[2];
+
 
         $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"BANCO","<=","Mensual_Acumulado");
+        $dataImporter=new DataImporter($year,$month,$module,"<=","Mensual_Acumulado");
         $dataImporter=null;
 
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"CASA","<=","Mensual_Acumulado");
-        $dataImporter=null;
 
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"GRUPO","<=","Mensual_Acumulado");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"OPERADORA","<=","Mensual_Acumulado");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SAVELLA","<=","Mensual_Acumulado");
-        $dataImporter=null;
-
-        $this->model('endpoints','dataimporter');
-        $dataImporter=new DataImporter($year,$month,"SERVICIOS","<=","Mensual_Acumulado");
-        $dataImporter=null;
 
         echo('success');               
 
