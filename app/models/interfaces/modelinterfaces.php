@@ -65,4 +65,12 @@ interface BigQueryFilterImporting extends BigQueryConnecting{
 
 }
 
+//IMPORTA DATOS DE LA TABLA BSEG
+interface BigQueryFilterImporting extends BigQueryConnecting{
+
+    public function importAccountFilters($accountTable,$module);
+    public function importCostCenterFilters($accountTable,$module);
+
+}
+
 ?>
