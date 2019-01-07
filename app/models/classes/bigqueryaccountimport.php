@@ -21,8 +21,6 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         }
 
-        print_r($this->accountArray);
-
     }
 
 }

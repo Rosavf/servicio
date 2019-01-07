@@ -15,6 +15,8 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
             ' WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) <= '.strval($month).
             ' AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).
             ' AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'")'.
+            ' AND BUKRS IN '.
+            '('.$row['SOCIEDADES'].') '.
             ' AND HKONT = (SELECT HKONT FROM '.$accountsTable.' WHERE ID = "'.$row['ID'].'" AND MODULO = "'.$module.'")';
 
             $subquerys[]=$dml;
