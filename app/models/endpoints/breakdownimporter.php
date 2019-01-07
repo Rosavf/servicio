@@ -5,8 +5,8 @@ class BreakdownImporter extends BigQueryBreakdownImport{
     public function __construct($year,$month,$module){
 
         $this->attachBigQuery(new BigQueryParser());
-        $this->importAccounts(ACCOUNTS_TABLE);
-        $this->importBreakDown($year,$month,$module,BSEG_TABLE,CECOS_TABLE,ACCOUNTS_TABLE);
+        $this->importAccounts($module,'`informe-211921.MULTIVA.CUENTAS`');
+        $this->importBreakDown($year,$month,$module,'`informe-211921.MULTIVA.BSEGAIO`','`informe-211921.MULTIVA.CECOS`','`informe-211921.MULTIVA.CUENTAS`');
         $this->detachBiqQuery();
 
     }
