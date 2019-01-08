@@ -18,7 +18,7 @@ class MySqlBreakdownWrite extends BigQueryBreakdownImport implements MySqlWritin
 
     public function writeMySql($table){
 
-        foreach ($this->Tabla_Cuentas as $row) {
+        foreach ($this->breakdownArray as $row) {
 
             $sql="INSERT INTO ".
             "`".$tabla."`(`Id_Cuenta`, `Mes`, `Anualidad`, `Modulo`, `Monto`, `CeCo`, `Descripcion`, `Fecha`, `Moneda`) ".
