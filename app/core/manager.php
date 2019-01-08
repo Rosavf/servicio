@@ -20,6 +20,7 @@ require_once('../app/controllers/classes/controller.php');
 
 //clases de modelos
 require_once('../app/models/classes/bigqueryconnection.php');
+require_once('../app/models/classes/mysqlconnection.php');
 require_once('../app/models/classes/bigqueryaccountimport.php');
 require_once('../app/models/classes/bigquerydataimport.php');
 require_once('../app/models/classes/bigquerybreakdownimport.php');
