@@ -2,7 +2,7 @@
 
 class MySqlBreakdownWrite extends BigQueryBreakdownImport implements MySqlWriting{
 
-    protected $mySql=[];
+    protected $mySql;
 
     public function attachMySql($mySql){
 
