@@ -23,7 +23,7 @@ class MySqlBreakdownWrite extends BigQueryBreakdownImport implements MySqlWritin
         foreach ($this->breakdownArray as $row) {
 
             $sql="INSERT INTO ".
-            "`".$tabla."`(`Id_Cuenta`, `Mes`, `Anualidad`, `Modulo`, `Monto`, `CeCo`, `Descripcion`, `Fecha`, `Moneda`) ".
+            "`".$table."`(`Id_Cuenta`, `Mes`, `Anualidad`, `Modulo`, `Monto`, `CeCo`, `Descripcion`, `Fecha`, `Moneda`) ".
             "VALUES ('".
             $row['ID']."','".$row['MES']."','".$row['ANUALIDAD']."','".$row['MODULO']."','".$row['MONTO']."','".$row['CECO']."','".$row['DESCRIPCION']."','".$row['FECHA']."','".$row['MONEDA']."')";
             
