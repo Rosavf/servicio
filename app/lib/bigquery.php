@@ -51,11 +51,8 @@ class BigQuery{
 
     }
 
-    public function end(){
+    
 
-
-
-    }
 
 }
 
