@@ -9,21 +9,6 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     protected $moduleArray=[];
 
     //
-    public function attachMySql($mySql){
-
-        $this->mySql=$mySql;
-        $this->mySql->begin('localhost','root','Pit2018mtv#@','INFORME');
-
-    }
-
-    //
-    public function detachMySql(){
-
-        $this->mySql=null;
-
-    }
-
-    //
     public function readModules($year,$month){
 
         foreach ($this->moduleArray as $key => $value) {

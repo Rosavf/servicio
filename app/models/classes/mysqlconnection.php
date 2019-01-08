@@ -1,6 +1,5 @@
 <?php
 
-
 class MySqlConnection implements MySqlConnecting {
     
     //
