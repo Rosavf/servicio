@@ -46,7 +46,7 @@ class BigQueryFilterExport extends BigQueryConnection{
             '["'.implode('","',$row['SOCIEDADES']).'"]'.' WHERE ID ='.'"'.$row['ID'].'" AND '.
             ' MODULO = "'.$module.'"'.';';
 
-            $query = $this->bigQuery->editQuery($dml);
+            //$query = $this->bigQuery->editQuery($dml);
 
         }
         
