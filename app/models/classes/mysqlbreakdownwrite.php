@@ -27,8 +27,6 @@ class MySqlBreakdownWrite extends BigQueryBreakdownImport implements MySqlWritin
             "VALUES ('".
             $row['ID']."','".$row['MES']."','".$row['ANUALIDAD']."','".$row['MODULO']."','".$row['MONTO']."','".$row['CECO']."','".$row['DESCRIPCION']."','".$row['FECHA']."','".$row['MONEDA']."')";
             
-            
-            
             $crud->query($tabla,$sql);
 
         }
