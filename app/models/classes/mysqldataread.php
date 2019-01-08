@@ -1,26 +1,11 @@
 <?php
 
-class MySqlDataRead implements MySqlDataReading{
+class MySqlDataRead extends MySqlConnection implements MySqlDataReading{
 
     protected $mySql;
     protected $accountArray=[];   
     protected $readArray=[];
     protected $dataArray=[];
-
-    //
-    public function attachMySql($mySql){
-
-        $this->mySql=$mySql;
-        $this->mySql->begin('localhost','root','Pit2018mtv#@','INFORME');
-
-    }
-
-    //
-    public function detachMySql(){
-
-        $this->mySql=null;
-
-    }
 
     //
     public function readData($table,$module){
