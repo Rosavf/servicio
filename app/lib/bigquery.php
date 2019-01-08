@@ -51,7 +51,13 @@ class BigQuery{
 
     }
 
-    
+    public function editQuery($dml){
+
+
+
+    }
+
+
 
 
 }
