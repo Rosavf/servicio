@@ -55,7 +55,7 @@ class BigQuery{
 
         $query = $this->bigQueryClient->query($dml);
 
-        $this->$query->
+        $this->$bigQueryClient->
 
     }
 
