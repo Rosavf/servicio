@@ -16,8 +16,24 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
                 $moduleResult = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$accountArray[$i]."'","Mes","assoc");
     
-                print_r($moduleResult);
-    
+                
+                $results=[];
+
+                foreach($moduleResult as $moduleRow){
+
+                    if($i==0){
+
+                        
+
+                    }
+
+                }
+
+                
+
+
+
+                
             }
     
         }
