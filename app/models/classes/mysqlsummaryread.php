@@ -3,8 +3,6 @@
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     private $accountArray=[];
-
-    protected $mySql=null;
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
     //
@@ -16,9 +14,9 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             for ($i=0; $i < $this->accountArray; $i++) { 
     
-                $module = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
+                $moduleResult = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$this->accountArray[$i]."'","Mes","assoc");
     
-                print_r($module);
+                print_r($moduleResult);
     
             }
     
