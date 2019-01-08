@@ -1,6 +1,6 @@
 <?php
 
-class MySqlSummaryRead{
+class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     private $accountArray=[];
 
@@ -41,6 +41,7 @@ class MySqlSummaryRead{
         }
 
     }
+
 
 
     
