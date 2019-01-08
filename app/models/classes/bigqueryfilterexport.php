@@ -46,9 +46,11 @@ class BigQueryFilterExport extends BigQueryConnection{
             $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['PAGADO'].', SOCIEDADES = '.
             '["'.implode('","',$row['SOCIEDADES']).'"]'.' WHERE ID ='.'"'.$row['ID'].' AND '.
             ' MODULO = "'.$module.'"'.';';
-            $this->bigQuery->getQuery($dml);
 
             echo($dml."<br><br><br>");
+
+            $this->bigQuery->getQuery($dml);
+
 
         }
         
