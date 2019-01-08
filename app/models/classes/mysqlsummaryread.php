@@ -9,7 +9,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     protected $moduleArray=[];
 
     //
-    public function readModules($year,$month){
+    public function readModules($table,$month){
 
         foreach ($this->moduleArray as $key => $value) {
 
