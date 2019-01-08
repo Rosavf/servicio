@@ -31,7 +31,6 @@ class MySqlBreakdownWrite extends BigQueryBreakdownImport implements MySqlWritin
 
         }
 
-        $crud->end();
 
     }
 
