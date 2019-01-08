@@ -6,7 +6,7 @@ final class Summary extends MySqlSummaryRead{
 
         $this->attachMySql(new PdoCrud());
         $this->readModules($table,$month);
-        $this->detachSql();
+        $this->detachMySql();
 
     }
 
