@@ -2,7 +2,7 @@
 
 class BigQueryBreakdownImport extends BigQueryAccountImport{
 
-    private $breakdownArray;
+    protected $breakdownArray;
 
     public function importBreakDown($year,$month,$module,$bigTable,$cecosTable,$accountsTable){
 
