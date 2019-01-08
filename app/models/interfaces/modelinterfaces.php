@@ -59,7 +59,7 @@ interface MySqlCleaning extends MySqlConnecting{
 
 interface MySqlSummaryReading extends MySqlConnecting{
 
-    public function readModules($year,$month);
+    public function readModules($table,$month);
 
 }
 
