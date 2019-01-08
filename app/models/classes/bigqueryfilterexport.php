@@ -44,7 +44,7 @@ class BigQueryFilterExport extends BigQueryConnection{
         foreach ($this->filterArray as $row) {
 
             $dml='UPDATE '.$table.' SET '.' PAGADO ='.$row['PAGADO'].', SOCIEDADES = '.
-            '["'.implode('","',$row['SOCIEDADES']).'"]'.' WHERE ID ='.'"'.$row['ID'].' AND '.
+            '["'.implode('","',$row['SOCIEDADES']).'"]'.' WHERE ID ='.'"'.$row['ID'].'" AND '.
             ' MODULO = "'.$module.'"'.';';
 
             echo($dml."<br><br><br>");
