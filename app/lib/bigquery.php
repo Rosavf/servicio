@@ -55,7 +55,19 @@ class BigQuery{
 
         $query = $this->bigQueryClient->query($dml);
 
-        $this->$bigQueryClient->runQuery($dml);
+        $queryResults = $this->$bigQueryClient->runQuery($dml);
+
+        if($queryResults){
+
+            return true;
+
+        }
+
+        else{
+
+            return false;
+
+        }
 
     }
 
