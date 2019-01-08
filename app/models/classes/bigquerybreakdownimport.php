@@ -10,7 +10,6 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
 
         foreach ($this->accountArray as $row) {
 
-            if($row['PAGADO']==true){
 
                 $dml = 'SELECT "'.$module.'" AS MODULO,'.$row['ID'].' AS ID, '.' DMBTR AS MONTO, CAST(SUBSTR(BUDAT,1,4) AS INT64) AS ANUALIDAD, CAST(SUBSTR(BUDAT,5,2) AS INT64) AS MES, BUDAT AS FECHA, PSWSL AS MONEDA, KOSTL AS CECO, BKTXT AS DESCRIPCION FROM'.
                 ' '.$bigTable.' '.
@@ -18,12 +17,11 @@ class BigQueryBreakdownImport extends BigQueryAccountImport{
                 ' AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).
                 ' AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'")'.
                 ' AND BUKRS IN '.
-                '('.$row['SOCIEDADES'].') '.
+                'AND SUBSTR(DBBLG,0,1) = "N"'.
                 ' AND HKONT = (SELECT HKONT FROM '.$accountsTable.' WHERE ID = "'.$row['ID'].'" AND MODULO = "'.$module.'")';
     
                 $subquerys[]=$dml;
 
-            }
 
                     
         }
