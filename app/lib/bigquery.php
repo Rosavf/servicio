@@ -53,7 +53,9 @@ class BigQuery{
 
     public function editQuery($dml){
 
+        $query = $this->bigQueryClient->query($dml);
 
+        $this->$query->
 
     }
 
