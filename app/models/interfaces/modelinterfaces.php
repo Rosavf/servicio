@@ -57,6 +57,12 @@ interface MySqlCleaning extends MySqlConnecting{
 
 }
 
+interface MySqlSummaryReading extends MySqlConnecting{
+
+    public function readModules($year,$month);
+
+}
+
 //IMPORTA DATOS DE LA TABLA BSEG
 interface BigQueryFilterImporting extends BigQueryConnecting{
 
