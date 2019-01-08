@@ -2,7 +2,7 @@
 
 class resumen extends Controller{
 
-    public function resumen($params){
+    public function mensual($params){
 
         $this->model('endpoints','summary');
         
