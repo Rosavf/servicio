@@ -48,6 +48,8 @@ class BigQueryFilterExport extends BigQueryConnection{
             ' MODULO = "'.$module.'"'.';';
             $this->bigQuery->getQuery($dml);
 
+            echo($dml."<br><br><br>");
+
         }
         
     }
