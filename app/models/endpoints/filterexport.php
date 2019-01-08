@@ -7,7 +7,7 @@ final class FilterExport extends BigQueryFilterExport{
         $this->attachBigQuery(new BigQueryParser());
         $this->readPostRequest($module,$request);
         $this->updateAccountFilters("BANCO","`informe-211921.MULTIVA.CUENTAS`");
-        $this->detachBigQuery();
+        $this->detachBiqQuery();
 
     }
 
