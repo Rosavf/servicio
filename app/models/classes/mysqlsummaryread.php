@@ -10,7 +10,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         $results=[];
 
-        $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
+        $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Id_Cuenta");
 
         for ($i=0; $i < count($accountArray); $i++) { 
     
@@ -24,7 +24,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         }
 
-        print_r($results);
+
 
     }
 
