@@ -23,7 +23,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 //$results
 
-                //Id_Cuenta
+                //$Id_Cuenta
 
             }
 
