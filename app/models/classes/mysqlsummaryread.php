@@ -23,7 +23,6 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 $results["Cuentas"][]=$acount;
 
-
             }
 
             $results[]=$results1;
