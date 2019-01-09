@@ -11,6 +11,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
         $results=[];
 
         foreach ($this->superconcepts as $superconcept) {
+
+            $results["Super_Concepto"] = 
             
             $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".$superconcept."'","Id_Cuenta");
 
@@ -20,7 +22,6 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
                     $moduleResult = $this->mySql->select($table,["Modulo", "Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$accountArray[$i]."'","Mes","assoc");
                     
-                    $results[]=$moduleResult;
         
                 }
     
@@ -28,7 +29,6 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
         }
 
-        echo(json_encode($results));
 
     }
 
