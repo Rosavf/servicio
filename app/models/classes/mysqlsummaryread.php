@@ -29,7 +29,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 foreach ($this->modules as $module) {
 
-
+                    $results2["Modules"][]=$module;
 
                 }
 
