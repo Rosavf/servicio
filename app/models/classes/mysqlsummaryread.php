@@ -27,6 +27,10 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                     $results2["Modules"][]=$module;
 
+                    $condiciones="Modulo = '".$module."'"." AND "."Id_Cuenta = '".$account."'";
+
+                    $mensualidades = $crud->select($tabla,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto", "Mes" ,"Subtotal"],$condiciones,"Mes","assoc");
+
                 }
 
                 $results1["Cuentas"][]=$results2;
