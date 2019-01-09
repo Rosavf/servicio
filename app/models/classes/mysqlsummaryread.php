@@ -12,21 +12,15 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
         foreach ($this->superconcepts as $superconcept) {
 
             $results1=[];
-
             $results1["Super_Concepto"] = $superconcept;
-
             $results1["Cuentas"]=[];
-
-            $results1[""];
             
-            $accountArray = $this->mySql->selectDistinct($table,"Cuenta_Mayor","Super_Concepto = '".$superconcept."'","Id_Cuenta");
+            $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".$superconcept."'","Id_Cuenta");
 
             foreach ($accountArray as $account) {
 
                 $results2=[];
-
                 $results2["Cuenta"]=$account;
-
                 $results2["Modules"]=[];
 
                 foreach ($this->modules as $module) {
