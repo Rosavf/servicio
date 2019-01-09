@@ -21,14 +21,14 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                     $moduleResult = $this->mySql->select($table,["Modulo", "Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$accountArray[$i]."'","Mes","assoc");
                     
                     $results[]=$moduleResult;
-    
-                    echo(json_encode($results));
-    
+        
                 }
     
             }
     
         }
+
+        echo(json_encode($results));
 
     }
 
