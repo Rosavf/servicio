@@ -10,36 +10,24 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         $results=[];
 
-
-
-        foreach ($this->superconcepts as $value) {
+        foreach ($this->superconcepts as $superconcept) {
             
+            $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".$superconcept."'","Id_Cuenta");
 
-
-
-
-
-
-        }
-
-
-
-
-
-        $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".''."'","Id_Cuenta");
-
-        for ($i=0; $i < count($accountArray); $i++) { 
+            for ($i=0; $i < count($accountArray); $i++) { 
+        
+                foreach ($this->modules as $module) {
     
-            foreach ($this->modules as $module) {
-
-                $moduleResult = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$accountArray[$i]."'","Mes","assoc");
-                
-                $results[]=$moduleResult;
-
-                echo(json_encode($results));
-
+                    $moduleResult = $this->mySql->select($table,["Modulo", "Id_Cuenta", "Anualidad", "Concepto", "Super_Concepto","Subtotal"],"Modulo = '".$module."'"." AND "."Id_Cuenta = '".$accountArray[$i]."'","Mes","assoc");
+                    
+                    $results[]=$moduleResult;
+    
+                    echo(json_encode($results));
+    
+                }
+    
             }
-
+    
         }
 
     }
