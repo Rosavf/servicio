@@ -3,7 +3,7 @@
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     protected $accountArray=[];
-    protected $superConcepts=["FACTOR HUMANO","GASTOS GENERALES"];
+    protected $superconcept=[];
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
     //
@@ -11,7 +11,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         $results=[];
 
-        $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Id_Cuenta");
+        $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Modulo = '".$module."'","Id_Cuenta");
 
         for ($i=0; $i < count($accountArray); $i++) { 
     
@@ -27,11 +27,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     }
 
-
-
     
+
 }
-
-
 
 ?>
