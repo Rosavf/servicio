@@ -2,7 +2,8 @@
 
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
-    private $accountArray=[];
+    protected $accountArray=[];
+    protected $superConcepts=["FACTOR HUMANO","GASTOS GENERALES"];
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
     //
