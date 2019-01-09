@@ -25,8 +25,6 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         }
 
-
-
     }
 
 
