@@ -21,9 +21,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             foreach ($accountArray as $account) {
 
-                //$results
+                $results["Cuentas"][]=$acount;
 
-                //$Id_Cuenta
 
             }
 
