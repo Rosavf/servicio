@@ -21,7 +21,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 
                 $results[]=$moduleResult;
 
-                print_r($results);
+                echo(json_encode($results));
 
 
             }
