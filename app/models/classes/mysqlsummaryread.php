@@ -25,7 +25,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 $results2["Cuenta"]=$account;
 
-                
+                $results2["Modules"]=[];
 
                 foreach ($this->modules as $module) {
 
@@ -33,7 +33,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 }
 
-                $results1["Cuentas"][]=$account;
+                $results1["Cuentas"][]=$results2;
 
             }
 
