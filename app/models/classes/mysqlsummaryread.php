@@ -52,10 +52,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         echo(json_encode($results));
 
-
     }
-
-    
 
 }
 
