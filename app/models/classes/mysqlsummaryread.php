@@ -17,7 +17,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             $results1["Cuentas"]=[];
 
-            $results1[""]
+            $results1[""];
             
             $accountArray = $this->mySql->selectDistinct($table,"Cuenta_Mayor","Super_Concepto = '".$superconcept."'","Id_Cuenta");
 
