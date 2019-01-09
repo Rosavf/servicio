@@ -21,7 +21,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 $results2=[];
                 $results2["Cuenta"]=$account;
-                $results2["Modules"]=[];
+                $results2["Modulos"]=[];
+                $results2["Llave"]=$superconcept.'-'.$account;
 
                 foreach ($this->modules as $module) {
 
@@ -35,7 +36,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                     $results3["Subtotal"]=$mensualidades[0]["Subtotal"];
 
-                    $results2["Modules"][]=$results3;
+                    $results2["Modulos"][]=$results3;
 
                 }
 
