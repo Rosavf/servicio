@@ -2,14 +2,29 @@
 
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
-    protected $accountArray=[];
-    protected $superconcept=["FACTOR HUMANO","GASTOS GENERALES"];
+    protected $superconcepts=["FACTOR HUMANO","GASTOS GENERALES"];
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
     //
     public function readModules($table,$month){
 
         $results=[];
+
+
+
+        foreach ($this->superconcepts as $value) {
+            
+
+
+
+
+
+
+        }
+
+
+
+
 
         $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".''."'","Id_Cuenta");
 
