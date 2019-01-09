@@ -36,6 +36,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                     $results3["Subtotal"]=$mensualidades[0]["Subtotal"];
 
+                    $results3["Llave"]=$superconcept."-".$account."-".$module;
+
                     $results2["Modulos"][]=$results3;
 
                 }
