@@ -8,12 +8,12 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     public function readModules($table,$month){
 
-            
+
 
         foreach ($status as $state) {
 
             $results=[];
-
+            $results["State"]=[""];
             $results["Super_Conceptos"]=[];
     
             foreach ($this->superconcepts as $superconcept) {
