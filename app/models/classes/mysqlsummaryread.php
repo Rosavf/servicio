@@ -4,9 +4,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     protected $status=["PAGADO"];
     protected $superconcepts=["FACTOR HUMANO","GASTOS GENERALES"];
-    protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
+    protected $modules=["OPERADORA","BANCO","CASA","GRUPO","SAVELLA","SERVICIOS"];
 
     public function readModules($table,$month){
+
+
 
         foreach ($this->status as $state) {
 
@@ -58,14 +60,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         }
 
-
-
-
-
         echo(json_encode($results));
-
-
-
 
     }
 
