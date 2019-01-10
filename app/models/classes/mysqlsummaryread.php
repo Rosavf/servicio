@@ -13,6 +13,8 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         foreach ($this->superconcepts as $superconcept) {
 
+            echo($superconcept);
+
             $results1=[];
             $results1["Super_Concepto"] = $superconcept;
             $results1["Cuentas"]=[];
