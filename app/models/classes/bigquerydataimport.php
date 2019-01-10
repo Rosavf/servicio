@@ -22,7 +22,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                         
                 $subquerys[]=$dml;
 
-                echo($dml);
+                echo($dml."<br><br><br>");
                             
             }
 
