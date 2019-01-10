@@ -21,7 +21,7 @@ class MySqlDataWrite extends BigQueryDataImport implements MySqlWriting{
 
         foreach ($this->subtotalTable as $row) {
 
-            $sql="INSERT INTO `".$table."`(`Modulo`, `Id_Cuenta`, `Cuenta`, `Concepto`, `Super_Concepto`, `Subtotal`, `Mes`, `Anualidad`) VALUES('".$row["Modulo"]."','".$row["Id_Cuenta"]."','".$row["Concepto"]."','".$row["Super_Concepto"]."','".$row["Subtotal"]."','".$row["Mes"]."','".$row["Anualidad"]."');";
+            $sql="INSERT INTO `".$table."`(`Modulo`, `Id_Cuenta`, `Cuenta`, `Concepto`, `Super_Concepto`, `Subtotal`, `Mes`, `Anualidad`) VALUES('".$row["Modulo"]."','".$row["Id_Cuenta"]."','".$row["Cuenta"]."','".$row["Concepto"]."','".$row["Super_Concepto"]."','".$row["Subtotal"]."','".$row["Mes"]."','".$row["Anualidad"]."');";
             $this->mySql->query($table,$sql);
 
         }
