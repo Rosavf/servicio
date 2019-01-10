@@ -24,6 +24,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                 $results2=[];
                 $results2["Id_Cuenta"]=$account;
+                
                 $results2["Cuenta"] = $this->mySql->select($table,["Concepto"],"Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'","Mes","assoc")[0]["Cuenta"];
                 $results2["Concepto"] = $this->mySql->select($table,["Concepto"],"Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'","Mes","assoc")[0]["Concepto"];
 
