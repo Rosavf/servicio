@@ -9,7 +9,7 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         $dml = 'SELECT ID, HKONT, ARRAY_TO_STRING(CONCEPTO, '*') AS CONCEPTO, PAGADO, SUPERCONCEPTO '.
 
-        ' FROM '.$accountTable.' WHERE MODULO = "'.$module.'" '.' ORDER BY ID';
+        ' FROM '.$accountTable.'ORDER BY ID';
 
         $accountResult = $this->bigQuery->select($dml);
 
