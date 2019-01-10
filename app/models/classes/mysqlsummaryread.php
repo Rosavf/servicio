@@ -46,9 +46,12 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             }
 
-            $results["Pagado"]=$results1;
+            $results["Pagado"][]=$results1;
     
         }
+
+
+
 
         echo(json_encode($results));
 
