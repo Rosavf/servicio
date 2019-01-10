@@ -8,9 +8,12 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     public function readModules($table,$month){
 
+
+        
+
         $results=[];
 
-        $results["Pagado"]=[];
+        $results["Super_Conceptos"]=[];
 
         foreach ($this->superconcepts as $superconcept) {
 
@@ -53,6 +56,9 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
         }
 
         echo(json_encode($results));
+
+
+
 
     }
 
