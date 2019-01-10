@@ -50,9 +50,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
                 }
     
-                $results["Pagado"][]=$results1;
+                $results["Super_Conceptos"][]=$results1;
         
             }
+
+
 
         }
 
