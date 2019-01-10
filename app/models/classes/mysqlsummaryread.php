@@ -2,12 +2,15 @@
 
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
+    protected $estado=["PAGADO","NO PAGADO"];
     protected $superconcepts=["FACTOR HUMANO","GASTOS GENERALES"];
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
     public function readModules($table,$month){
 
         $results=[];
+
+        $resultPay=[];
 
         foreach ($this->superconcepts as $superconcept) {
 
@@ -27,17 +30,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 foreach ($this->modules as $module) {
 
                     $results3=[];
-
                     $results3["Modulo"]=$module;
-
                     $conditions="Modulo = '".$module."'"." AND "."Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'";
-
                     $mensualidades = $this->mySql->select($table,["Subtotal"],$conditions,"Mes","assoc");
-
                     $results3["Subtotal"]=$mensualidades[0]["Subtotal"];
-
                     $results3["Llave"]=$superconcept."-".$account."-".$module;
-
                     $results2["Modulos"][]=$results3;
 
                 }
@@ -46,11 +43,10 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             }
 
-            $results[]=$results1;
+            $resultPay[]=$results1;
     
         }
 
-        echo(json_encode($results));
 
     }
 
