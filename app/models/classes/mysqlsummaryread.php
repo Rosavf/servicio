@@ -33,7 +33,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                     $conditions="Modulo = '".$module."'"." AND "."Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'";
                     $mensualidades = $this->mySql->select($table,["Subtotal"],$conditions,"Mes","assoc");
                     $results3["Subtotal"]=$mensualidades[0]["Subtotal"];
-                    $results3["Llave"]=$superconcept."-".$account."-".$module;
+                    $results3["Llave"]=$account."-".$module;
                     $results2["Modulos"][]=$results3;
 
                 }
