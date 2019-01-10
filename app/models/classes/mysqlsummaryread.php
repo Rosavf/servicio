@@ -2,7 +2,6 @@
 
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
-    protected $estado=["PAGADO","NO PAGADO"];
     protected $superconcepts=["FACTOR HUMANO","GASTOS GENERALES"];
     protected $modules=["BANCO","CASA","GRUPO","OPERADORA","SAVELLA","SERVICIOS"];
 
@@ -10,7 +9,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
         $results=[];
 
-        $resultPay=[];
+        $results["Pagado"]=[];
 
         foreach ($this->superconcepts as $superconcept) {
 
@@ -43,10 +42,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
             }
 
-            $resultPay[]=$results1;
+            $results["Pagado"]=$results1;
     
         }
 
+        echo(json_encode($results));
 
     }
 
