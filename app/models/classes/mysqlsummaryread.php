@@ -8,12 +8,12 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
     public function readModules($table,$month){
 
-
+        $response=[];
 
         foreach ($this->status as $state) {
 
             $results=[];
-            $results["State"]=$state;
+            $results["Estado"]=$state;
             $results["Super_Conceptos"]=[];
     
             foreach ($this->superconcepts as $superconcept) {
@@ -56,11 +56,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
         
             }
 
-
+            $response[]=$results;
 
         }
 
-        echo(json_encode($results));
+        echo(json_encode($response));
 
     }
 
