@@ -10,5 +10,13 @@ class resumen extends Controller{
         
     }
 
+    public function acumulado($params){
+
+        $this->model('endpoints','summary');
+
+        $summary = new Summary('Mensual',$params);
+        
+    }
+
 }
 
