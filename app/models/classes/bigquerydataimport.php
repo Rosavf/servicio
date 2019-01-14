@@ -19,6 +19,8 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
                 ' AND SUBSTR(DBBLG,0,4) <> "PROV"'.
                 'AND HKONT = "'.strval($row['HKONT']).'")';
+
+                echo($dml);
                         
                 $subquerys[]=$dml;
                             
