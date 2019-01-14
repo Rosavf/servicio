@@ -317,7 +317,6 @@ class PdoCrud{
          
         $sql="SELECT SUM("."CAST(".$col." AS DECIMAL)".") AS ".$col." FROM ".$table." WHERE ".$targets;
 
-        //echo($sql);
 
         try{
 
@@ -325,9 +324,15 @@ class PdoCrud{
 
             print_r($result);
 
-            $list=[];
+            $sum=[];
 
-            return null;
+            foreach ($result as $key => $value) {
+
+                $sum[$key]=$value;
+
+            }
+
+            return $sum;
 
         }
 
