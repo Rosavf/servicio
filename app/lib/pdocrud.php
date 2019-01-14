@@ -313,6 +313,37 @@ class PdoCrud{
 
     }
 
+    public function selectSum($table,$col,$targets,$order){
+        
+        $sql="SELECT SUM(".$col.") FROM ".$table." WHERE ".$targets." ORDER BY ".$order;
+
+        try{
+
+            $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
+
+            $list=[];
+            foreach ($result as $row) {
+
+                foreach ($row as $value) {
+
+                    $list[]=$value;
+
+                }
+                
+            }
+
+            return $list;
+
+        }
+
+        catch(Exception $e){
+            die($e);
+            return null;
+        }
+
+
+    }
+
 }
 
 

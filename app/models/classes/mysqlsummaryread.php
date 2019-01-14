@@ -51,7 +51,11 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                     //
                     $total=[];
                     $total["Modulo"]="TOTAL";
-                    $total["Subtotal"]="10.00";
+                    $conditions="Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'";
+                    $total["Subtotal"]=$this->mySql->selectSum($table,["Subtotal"],$conditions,"Mes");
+
+                    print_r($total);
+
                     $total["Llave"]=$account."-TOTAL";
 
                     //
