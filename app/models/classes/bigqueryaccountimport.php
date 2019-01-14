@@ -11,8 +11,6 @@ class BigQueryAccountImport extends BigQueryConnection implements BigQueryAccoun
 
         $accountResult = $this->bigQuery->select($dml);
 
-        print_r($accountResult);
-
         foreach ($accountResult as $i => $row) {
 
             $this->accountArray[$i] = $row;
