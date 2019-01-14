@@ -57,6 +57,8 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 $this->subtotalTable[$index]['Subtotal']=$row['SUBTOTAL'];
                 $this->subtotalTable[$index]['Mes']=$row['MES'];
                 $this->subtotalTable[$index]['Anualidad']=$row['ANUALIDAD'];
+                $this->subtotalTable[$index]['Pagado']=$row['PAGADO'];
+
 
                 $index++;
 
