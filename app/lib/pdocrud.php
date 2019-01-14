@@ -317,22 +317,18 @@ class PdoCrud{
          
         $sql="SELECT SUM("."CAST(".$col." AS DECIMAL)".") AS ".$col." FROM ".$table." WHERE ".$targets;
 
-
         try{
 
             $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
 
-            print_r($result);
-
             $sum=[];
-
 
             foreach ($result as $value) {
 
                 foreach ($value as $key => $cell) {
 
-                    $sum[]=$cell;
-
+                    $sum[$key]=$cell;
+                    
                 }
                 
             }
