@@ -56,10 +56,18 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                     //
                     $results2["Modulos"][]=$total;
+
+                    //
                     $results1["Cuentas"][]=$results2;
     
                 }
-    
+
+                $suma=[];
+                $suma["Id_Cuenta"]="100";
+                $suma["Cuenta"]="---";
+                $suma["Concepto"]="Suma";
+                $suma["Modulos"]=[];
+                
                 $results["Super_Conceptos"][]=$results1;
         
             }
