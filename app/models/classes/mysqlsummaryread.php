@@ -69,9 +69,9 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 $suma["Concepto"]="Suma";
                 $suma["Modulos"]=[];
 
-                foreach ($modules as $module) {
+                foreach ($this->modules as $module) {
 
-                    
+
 
                 }
 
