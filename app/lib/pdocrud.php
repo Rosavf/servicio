@@ -326,9 +326,10 @@ class PdoCrud{
 
             $sum=[];
 
-            foreach ($result as $key => $value) {
 
-                $sum[$key]=$value;
+            foreach ($result as $value) {
+
+                $sum[]=$value;
 
             }
 
