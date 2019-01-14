@@ -50,7 +50,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 if($row['SUBTOTAL']==null){$row['SUBTOTAL']=0;}
 
                 if($row['PAGADO']==1){$row['PAGADO']='1';}
-                else if($row['PAGADO']==1){$row['PAGADO']='1';}
+                else if($row['PAGADO']==0){$row['PAGADO']='0';}
                 else{  }
 
 
