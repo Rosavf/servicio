@@ -48,7 +48,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
                     $total=[];
 
-                    $total["Modulo"]="Total";
+                    $total["Modulo"]="TOTAL";
                     $total["Subtotal"]="10.00";
                     $total["Llave"]=$account."-TOTAL";
 
