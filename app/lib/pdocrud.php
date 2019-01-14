@@ -315,7 +315,7 @@ class PdoCrud{
 
     public function selectSum($table,$col,$targets,$order){
         
-        $sql="SELECT SUM(".$col.") FROM ".$table." WHERE ".$targets." ORDER BY ".$order;
+        $sql="SELECT SUM(".$col.") FROM ".$table." WHERE ".$targets;
 
         try{
 
