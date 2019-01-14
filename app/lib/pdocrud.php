@@ -323,20 +323,11 @@ class PdoCrud{
 
             $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
 
-            //print_r($result);
+            print_r($result);
 
             $list=[];
-            foreach ($result as $row) {
 
-                foreach ($row as $value) {
-
-                    $list[]=$value;
-
-                }
-                
-            }
-
-            return $list;
+            return null;
 
         }
 
