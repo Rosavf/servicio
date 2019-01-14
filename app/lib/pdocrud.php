@@ -317,6 +317,7 @@ class PdoCrud{
          
         $sql="SELECT SUM("."CAST(".$col." AS DATE)".") FROM ".$table." WHERE ".$targets;
 
+        echo($sql);
 
         try{
 
