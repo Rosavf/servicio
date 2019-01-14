@@ -317,9 +317,12 @@ class PdoCrud{
          
         $sql="SELECT SUM("."CAST(".$col." AS DATE)".") FROM ".$table." WHERE ".$targets;
 
+
         try{
 
             $result=$this->pdo->query($sql,PDO::FETCH_ASSOC);
+
+            print_r($result);
 
             $list=[];
             foreach ($result as $row) {
