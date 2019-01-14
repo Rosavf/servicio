@@ -20,7 +20,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 ' AND SUBSTR(DBBLG,0,4) <> "PROV"'.
                 'AND HKONT = "'.strval($row['HKONT']).'")';
 
-                echo($dml);
+                echo($dml.'<br><br><br>');
                         
                 $subquerys[]=$dml;
                             
