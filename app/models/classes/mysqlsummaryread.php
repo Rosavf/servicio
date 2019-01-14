@@ -48,7 +48,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
                     }
 
-                    //
+                    //creamos id y suma de cada superconcepto
                     $total=[];
                     $total["Modulo"]="TOTAL";
                     $conditions="Id_Cuenta = '".$account."'"." AND "."Mes = '".$month."'";
@@ -71,6 +71,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 $sum["Concepto"]="SUMA";
                 $sum["Modulos"]=[];
 
+                //modulos de suma por superconepto
                 foreach ($this->modules as $module) {
 
                     $sumModule=[];
