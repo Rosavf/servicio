@@ -333,7 +333,7 @@ class PdoCrud{
                 
             }
 
-            return $sum;
+            return $sum[$col];
 
         }
 
