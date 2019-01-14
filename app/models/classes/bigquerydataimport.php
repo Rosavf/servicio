@@ -49,6 +49,12 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
                 if($row['SUBTOTAL']==null){$row['SUBTOTAL']=0;}
 
+                if($row['PAGADO']==1){$row['PAGADO']='1';}
+                else if($row['PAGADO']==1){$row['PAGADO']='1';}
+                else{  }
+
+
+
                 $this->subtotalTable[$index]['Modulo']=$row['MODULO'];
                 $this->subtotalTable[$index]['Id_Cuenta']=$row['ID'];
                 $this->subtotalTable[$index]['Cuenta']=$row['CUENTA'];
