@@ -14,7 +14,7 @@ class resumen extends Controller{
 
         $this->model('endpoints','summary');
 
-        $summary = new Summary('Mensual',$params);
+        $summary = new Summary('Mensual_Acumulado',$params);
         
     }
 
