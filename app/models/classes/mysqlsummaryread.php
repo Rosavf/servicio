@@ -2,7 +2,7 @@
 
 class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
 
-    protected $status=["PAGADO"];
+    protected $status=["1"];
     protected $superconcepts=["FACTOR HUMANO","GASTOS GENERALES"];
     protected $modules=["OPERADORA","BANCO","CASA","GRUPO","SAVELLA","SERVICIOS"];
 
