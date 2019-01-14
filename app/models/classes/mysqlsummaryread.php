@@ -24,6 +24,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 
                 $accountArray = $this->mySql->selectDistinct($table,"Id_Cuenta","Super_Concepto = '".$superconcept."'","Id_Cuenta");
     
+                //iteramos cuentas
                 foreach ($accountArray as $account) {
     
                     $results2=[];
@@ -34,6 +35,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                     $results2["Modulos"]=[];
 
     
+                    //iteramos modulos
                     foreach ($this->modules as $module) {
     
                         $results3=[];
@@ -46,12 +48,13 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
     
                     }
 
+                    //
                     $total=[];
-
                     $total["Modulo"]="TOTAL";
                     $total["Subtotal"]="10.00";
                     $total["Llave"]=$account."-TOTAL";
 
+                    //
                     $results2["Modulos"][]=$total;
                     $results1["Cuentas"][]=$results2;
     
