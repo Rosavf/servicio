@@ -317,7 +317,7 @@ class PdoCrud{
          
         $sql="SELECT SUM("."CAST(".$col." AS DECIMAL)".") AS ".$col." FROM ".$table." WHERE ".$targets;
 
-        echo($sql);
+        //echo($sql);
 
         try{
 
