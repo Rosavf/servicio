@@ -90,7 +90,7 @@ class MySqlSummaryRead extends MySqlConnection implements MySqlSummaryReading{
                 $total1["Llave"]="SUM-TOTAL";
 
                 //
-                $sum["Modulos"][]=$total;
+                $sum["Modulos"][]=$total1;
 
                 $results1["Cuentas"][]=$sum;
                 
