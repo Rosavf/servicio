@@ -16,16 +16,64 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
                 if($row['PAGADO']==1){
 
-                    $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
-                    'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
-                    'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
-                    ' AND SUBSTR(DBBLG,0,4) <> "PROV"'.
-                    'AND HKONT = "'.strval($row['HKONT']).'")';
-                            
-                    $subquerys[]=$dml;
+                    switch ($row['HKONT']) {
+
+                        case '6410010103':
+
+                        $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
+                        'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
+                        'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
+                        ' AND SUBSTR(DBBLG,0,4) = "PROV"'.
+                        'AND HKONT = "'.strval($row['HKONT']).'")';
+                                
+                        $subquerys[]=$dml;
+
+                            break;
+
+                        case '6410010102':
+
+                        $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
+                        'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
+                        'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
+                        ' AND SUBSTR(DBBLG,0,4) = "PROV"'.
+                        'AND HKONT = "'.strval($row['HKONT']).'")';
+                                    
+                        $subquerys[]=$dml;
+    
+                            break;
+
+                        case '6410010104':
+
+                        $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
+                        'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
+                        'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
+                        ' AND SUBSTR(DBBLG,0,4) = "PROV"'.
+                        'AND HKONT = "'.strval($row['HKONT']).'")';
+                                        
+                        $subquerys[]=$dml;
+        
+                            break;
+                        
+                        default:
+
+                        $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
+                        'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
+                        'WHERE CAST(SUBSTR(BUDAT,5,2) AS INT64) '.strval($operator).' '.strval($i).' '.'AND CAST(SUBSTR(BUDAT,1,4) AS INT64) = '.strval($year).' '.'AND KOSTL IN (SELECT KOSTL FROM '.$cecosTable.' WHERE MODULO = "'.strval($module).'") '.
+                        ' AND SUBSTR(DBBLG,0,4) <> "PROV"'.
+                        'AND HKONT = "'.strval($row['HKONT']).'")';
+                                
+                        $subquerys[]=$dml;
+
+                            break;
+                    }
+
+
 
 
                 }
+
+
+                // en caso de ser gastos no pagados
                 else if($row['PAGADO']==0){
 
                     $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
@@ -35,6 +83,12 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                     'AND HKONT = "'.strval($row['HKONT']).'")';
                             
                     $subquerys[]=$dml;
+
+                }
+
+                else{
+
+
 
                 }
 
@@ -67,7 +121,6 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
                 if($row['PAGADO']==1){$row['PAGADO']='1';}
                 else if($row['PAGADO']==0){$row['PAGADO']='0';}
                 else{  }
-
 
 
                 $this->subtotalTable[$index]['Modulo']=$row['MODULO'];
