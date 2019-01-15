@@ -18,7 +18,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
                     switch ($row['HKONT']) {
 
-                        case '6410010103':
+                        case '6410010102':
 
                         $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
                         'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
@@ -30,7 +30,7 @@ class BigQueryDataImport extends BigQueryAccountImport implements BigQueryDataIm
 
                             break;
 
-                        case '6410010102':
+                        case '6410010103':
 
                         $dml = 'SELECT ROUND(SUM(CAST(DMBTR AS FLOAT64)), 2)'.' AS SUBTOTAL, '.'"'.strval($year).'"'.' AS ANUALIDAD, '.'"'.$module.'"'.' AS MODULO, '.'"'.$row['HKONT'].'"'.' AS CUENTA, '.'"'.$row['ID'].'"'.' AS ID, '.'"'.strval($i).'"'.' AS MES, '.'"'.$row['SUPERCONCEPTO'].'"'.' AS SUPERCONCEPTO, '.'"'.$row['CONCEPTO'].'"'.' AS CONCEPTO, "'.strval($row['PAGADO']).'" AS PAGADO '.
                         'FROM (SELECT BUDAT, KOSTL, HKONT, DMBTR FROM '.$bigTable.' '.
